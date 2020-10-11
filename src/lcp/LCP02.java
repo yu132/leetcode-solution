@@ -1,6 +1,6 @@
 package lcp;
 
-public class LCP2 {
+public class LCP02 {
 	
 	class Solution {
 		
@@ -20,10 +20,10 @@ public class LCP2 {
 				return new int[] { cont[0], 1 };
 			}
 			
-			int	numerator	= 1;//·Ö×Ó
-			int	denominator	= cont[cont.length - 1];//·ÖÄ¸
+			int	numerator	= 1;//ï¿½ï¿½ï¿½ï¿½
+			int	denominator	= cont[cont.length - 1];//ï¿½ï¿½Ä¸
 			
-			for (int i = cont.length - 2; i >= 1; --i) {//Íê³ÉÒ»´ÎÏà¼Ó²¢½»»»·Ö×Ó·ÖÄ¸
+			for (int i = cont.length - 2; i >= 1; --i) {//ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Ó²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó·ï¿½Ä¸
 				int temp = numerator + cont[i] * denominator;
 				numerator	= denominator;
 				denominator	= temp;
