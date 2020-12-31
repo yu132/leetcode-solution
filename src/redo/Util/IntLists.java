@@ -1,7 +1,9 @@
 package redo.Util;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**  
  * @ClassName: IntLists  
@@ -21,6 +23,14 @@ public class IntLists {
             arr[i] = list.get(i);
         }
         return arr;
+    }
+
+    public static Set<Integer> toSet(int[] nums) {
+        Set<Integer> set = new HashSet<>();
+        for (int num : nums) {
+            set.add(num);
+        }
+        return set;
     }
 
     public static int sum(int[] nums) {
@@ -47,4 +57,23 @@ public class IntLists {
         return list;
     }
 
+
+    public static void arrayRotationForward(int[] array, int from, int length, int k) {
+        k %= length;
+        reverse(array, from, from + k - 1);
+        reverse(array, from + k, from + length - 1);
+        reverse(array, from, from + length - 1);
+    }
+
+    public static void reverse(int[] array, int from, int to) {
+        for (; from < to; ++from, --to) {
+            swap(array, from, to);
+        }
+    }
+
+    public static void swap(int[] array, int x, int y) {
+        int num = array[x];
+        array[x] = array[y];
+        array[y] = num;
+    }
 }
