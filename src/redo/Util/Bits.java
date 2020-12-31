@@ -145,6 +145,35 @@ public class Bits {
         return Integer.bitCount(num);
     }
 
+    // 计算二进制数的长度
+    public int bitLen(int num) {
+        int temp, len = 0;
+        if ((temp = num >>> 16) != 0) {
+            num = temp;
+            len += 16;
+        }
+        if ((temp = num >>> 8) != 0) {
+            num = temp;
+            len += 8;
+        }
+        if ((temp = num >>> 4) != 0) {
+            num = temp;
+            len += 4;
+        }
+        if ((temp = num >>> 2) != 0) {
+            num = temp;
+            len += 2;
+        }
+        if ((temp = num >>> 1) != 0) {
+            num = temp;
+            len += 1;
+        }
+        if (num == 1) {
+            len += 1;
+        }
+        return len;
+    }
+
     public int negative(int num) {
         return add(~num, 1);
     }
@@ -262,5 +291,13 @@ public class Bits {
         assertEquals(18645165 - 2488949, minus(18645165, 2488949));
         assertEquals(-18645165 - 2488949, minus(-18645165, 2488949));
         assertEquals(18645165 + 2488949, minus(18645165, -2488949));
+    }
+
+    @Test
+    public void test4() {
+        assertEquals(32, bitLen(of("10000000000000000000000000000000")));
+        assertEquals(31, bitLen(of("01000000000000000000000000000000")));
+        assertEquals(17, bitLen(of("00000000000000011000000000000000")));
+        assertEquals(4, bitLen(of("00000000000000000000000000001000")));
     }
 }

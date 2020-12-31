@@ -1,5 +1,9 @@
 package redo.Util;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
 /**  
  * @ClassName: NumCounter  
  *
@@ -45,6 +49,48 @@ public class NumCounterUtil {
                 col[j] += matrix[i][j];
             }
         }
+    }
+
+    static class Counter<K> {
+
+        private Map<K, IntValue> counter;
+
+        public Counter() {
+            this(16);
+        }
+
+        public Counter(int size) {
+            super();
+            this.counter = new HashMap<>(size);
+        }
+
+        public final static IntValue NUM_0 = new IntValue();
+
+        public void plus1(K key) {
+            ++counter.computeIfAbsent(key, (x) -> new IntValue()).value;
+        }
+
+        public void minus1(K key) {
+            if (counter.containsKey(key)) {
+                IntValue val = counter.get(key);
+                --val.value;
+                if (val.value == 0) {
+                    counter.remove(key);
+                }
+            }
+        }
+
+        public int get(K key) {
+            return counter.getOrDefault(key, NUM_0).value;
+        }
+
+        public Set<K> keys() {
+            return counter.keySet();
+        }
+    }
+
+    static class IntValue {
+        int value = 0;
     }
 
 }

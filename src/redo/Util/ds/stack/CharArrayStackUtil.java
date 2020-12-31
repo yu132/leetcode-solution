@@ -1,4 +1,4 @@
-package redo.Util.stack;
+package redo.Util.ds.stack;
 
 /**  
  * @ClassName: IntArrayStackUtil  
@@ -10,25 +10,26 @@ package redo.Util.stack;
  * @date 2020年12月29日  
  *  
  */
-public class IntArrayStackUtil {
+public class CharArrayStackUtil {
 
-    static class FixedIntArrayStack {
-        int index = 0, stack[];
+    static class FixedCharArrayStack {
+        int index = 0;
+        char[] stack;
 
-        public FixedIntArrayStack(int len) {
+        public FixedCharArrayStack(int len) {
             super();
-            this.stack = new int[len];
+            this.stack = new char[len];
         }
 
-        public void push(int num) {
+        public void push(char num) {
             stack[index++] = num;
         }
 
-        public int pop() {
+        public char pop() {
             return stack[--index];
         }
 
-        public int peek() {
+        public char peek() {
             return stack[index - 1];
         }
 

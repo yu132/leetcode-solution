@@ -18,7 +18,8 @@ public class P1702 {
     class Solution {
         public String maximumBinaryString(String binary) {
             int count1 = 0;
-            for (char ch : binary.toCharArray()) {
+            char[] chs = binary.toCharArray();
+            for (char ch : chs) {
                 if (ch == '1') {
                     ++count1;
                 }
@@ -26,15 +27,14 @@ public class P1702 {
             if (count1 == binary.length() || count1 == binary.length() - 1) {
                 return binary;
             }
-            return repeat('1', binary.length() - 1 - count1) + "0" + repeat('1', count1);
-        }
-
-        public String repeat(char ch, int times) {
-            StringBuilder buf = new StringBuilder(times);
-            for (int i = 0; i < times; ++i) {
-                buf.append(ch);
+            for (int i = 0; i < binary.length() - 1 - count1; ++i) {
+                chs[i] = '1';
             }
-            return buf.toString();
+            chs[binary.length() - 1 - count1] = '0';
+            for (int i = binary.length() - count1; i < chs.length; ++i) {
+                chs[i] = '1';
+            }
+            return String.valueOf(chs);
         }
     }
 
