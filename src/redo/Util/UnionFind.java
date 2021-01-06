@@ -19,9 +19,7 @@ import org.junit.Test;
 public class UnionFind {
 
     public static class WeightedUnionFind {
-        private int[] weight;
-        private int[] parent;
-        private int connectedComponentCount;
+        int connectedComponentCount, weight[], parent[];
 
         public WeightedUnionFind(int num) {
             super();

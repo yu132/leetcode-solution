@@ -1,5 +1,11 @@
 package redo.Util.math;
 
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.math.BigInteger;
+
+import org.junit.Test;
+
 /**  
  * @ClassName: ArrangementNumber  
  *
@@ -12,33 +18,56 @@ package redo.Util.math;
  */
 public class ArrangementNumber {
 
-    public int arrangementNumber(int m, int n, int mod) {
+    public static int arrangementNumber(int m, int n, int mod) {
         return factorial(n, mod) / factorial(n - m, mod);
     }
 
-    public int combinatorialNumber(int m, int n, int mod) {
-        return factorial(n, mod) / (factorial(n - m, mod) * factorial(m, mod));
-    }
+    // public static int combinatorialNumber(int m, int n, int mod) {
+    // return factorial(n, mod) / (factorial(n - m, mod) * factorial(m, mod));
+    // }
 
-    public int factorial(int num, int mod) {
+    public static int factorial(int num, int mod) {
         long n = 1;
-        for (int i = 2; i < num; ++i) {
+        for (int i = 2; i <= num; ++i) {
             n *= i;
             n %= mod;
         }
         return (int)n;
     }
 
-    public int combinatorialNumber(int m, int n) {
-        return factorial(n) / (factorial(n - m) * factorial(m));
+    // public static int combinatorialNumber(int m, int n) {
+    // return factorial(n) / (factorial(n - m) * factorial(m));
+    // }
+    //
+    // public static int factorial(int num) {
+    // int n = 1;
+    // for (int i = 2; i <= num; ++i) {
+    // n *= i;
+    // }
+    // return n;
+    // }
+
+    // n > m
+    public int combinatorialNumber(int m, int n, int mod) {
+        BigInteger a = factorial(n);
+        BigInteger b = (factorial(n - m).multiply(factorial(m)));
+        BigInteger c = a.divide(b);
+        return c.mod(BigInteger.valueOf(mod)).intValue();
     }
 
-    public int factorial(int num) {
-        int n = 1;
+    public BigInteger factorial(int num) {
+        BigInteger ans = BigInteger.ONE;
         for (int i = 2; i <= num; ++i) {
-            n *= i;
+            ans = ans.multiply(BigInteger.valueOf(i));
         }
-        return n;
+        return ans;
+    }
+
+    @Test
+    public void test() {
+        assertEquals(6, combinatorialNumber(2, 4, 10));
+        assertEquals(3, combinatorialNumber(1, 3, 10));
+        assertEquals(45449810, combinatorialNumber(123, 32003, 1000000007));
     }
 
 }

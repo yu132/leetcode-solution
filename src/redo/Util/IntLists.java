@@ -41,10 +41,34 @@ public class IntLists {
         return sum;
     }
 
+    public static double mean(int[] nums) {
+        int sum = 0;
+        for (int num : nums) {
+            sum += num;
+        }
+        return (double)sum / nums.length;
+    }
+
+    public static int product(int[] nums, int start, int end) {
+        int product = 1;
+        for (int i = start; i < end; ++i) {
+            product *= nums[i];
+        }
+        return product;
+    }
+
     public static int max(int[] nums) {
         int max = Integer.MIN_VALUE;
         for (int num : nums) {
             max = Math.max(max, num);
+        }
+        return max;
+    }
+
+    public static int max(int[] nums, int start, int end) {
+        int max = Integer.MIN_VALUE;
+        for (int i = start; i < end; ++i) {
+            max = Math.max(max, nums[i]);
         }
         return max;
     }
@@ -75,5 +99,39 @@ public class IntLists {
         int num = array[x];
         array[x] = array[y];
         array[y] = num;
+    }
+
+    public List<Range> splitBy(int val, int[] nums) {
+        List<Range> splitIndex = new ArrayList<>();
+        int start = 0;
+        for (int i = 0; i < nums.length; ++i) {
+            if (nums[i] == val) {
+                if (start == i) {
+                    start = i + 1;
+                    continue;
+                }
+                splitIndex.add(new Range(start, i));
+                start = i + 1;
+            }
+        }
+        if (start != nums.length) {
+            splitIndex.add(new Range(start, nums.length));
+        }
+        return splitIndex;
+    }
+
+    static class Range {
+        int start;
+        int end;
+
+        Range(int start, int end) {
+            super();
+            this.start = start;
+            this.end = end;
+        }
+
+        public boolean isValueInRange(int value) {
+            return start <= value && value <= end;
+        }
     }
 }

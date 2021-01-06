@@ -36,6 +36,10 @@ public class CharArrayStackUtil {
         public boolean isEmpty() {
             return index == 0;
         }
+
+        public int size() {
+            return index;
+        }
     }
 
 }

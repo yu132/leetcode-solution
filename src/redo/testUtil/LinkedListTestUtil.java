@@ -18,6 +18,10 @@ import model.ListNode;
  */
 public class LinkedListTestUtil {
 
+    public static ListNode build(String nums) {
+        return build(Arrs.build(nums));
+    }
+
     public static ListNode build(int... nums) {
         ListNode head = new ListNode(0), node = head;
         for (int num : nums) {

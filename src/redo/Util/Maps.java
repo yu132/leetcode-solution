@@ -1,5 +1,11 @@
 package redo.Util;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 /**  
  * @ClassName: Maps  
  *
@@ -11,5 +17,23 @@ package redo.Util;
  *  
  */
 public class Maps {
+
+    static class ListMap<K, E> {
+
+        Map<K, List<E>> map = new HashMap<>();
+
+        public void add(K key, E element) {
+            map.computeIfAbsent(key, (x) -> new ArrayList<>()).add(element);
+        }
+
+        public void remove(K key, E element) {
+            map.computeIfAbsent(key, (x) -> new ArrayList<>()).remove(element);
+        }
+
+        public List<E> get(K key) {
+            return map.getOrDefault(key, Collections.emptyList());
+        }
+
+    }
 
 }

@@ -19,6 +19,9 @@ import org.junit.Test;
 public class MaxMinN {
 
     // O(n*k) 当k比较小的时候可以使用，k比较大的时候建议使用
+
+    // [0] min -3,-2,-1 小到大
+    // [1] max 3,2,1 大到小
     public int[][] maxMinN(int[] arr, int k) {
         int[] max = new int[k], min = new int[k];
         Arrays.fill(max, Integer.MIN_VALUE);

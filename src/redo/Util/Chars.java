@@ -20,4 +20,40 @@ public class Chars {
         return chs;
     }
 
+    public boolean[] containChars(String str) {
+        boolean[] contains = new boolean[26];
+        for (char ch : str.toCharArray()) {
+            contains[ch - 'a'] = true;
+        }
+        return contains;
+    }
+
+    static class LowercaseLettersCounter {
+        int[] count = new int[26];
+
+        public void count(String str) {
+            for (char ch : str.toCharArray()) {
+                ++count[getIndex(ch)];
+            }
+        }
+
+        public int getCount(char ch) {
+            return count[getIndex(ch)];
+        }
+
+        public void merge(int[] count) {
+            for (int i = 0; i < 26; ++i) {
+                this.count[i] += count[i];
+            }
+        }
+
+        public void merge(LowercaseLettersCounter counter) {
+            merge(counter.count);
+        }
+
+        private int getIndex(char ch) {
+            return ch - 'a';
+        }
+    }
+
 }

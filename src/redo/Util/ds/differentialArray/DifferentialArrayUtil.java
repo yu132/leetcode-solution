@@ -38,6 +38,16 @@ public class DifferentialArrayUtil {
             differentialArray[to] -= value;
         }
 
+        public int[] getNums() {
+            int[] nums = new int[differentialArray.length - 1];
+            int sum = 0;
+            for (int i = 0; i < nums.length; ++i) {
+                sum += differentialArray[i];
+                nums[i] = sum;
+            }
+            return nums;
+        }
+
     }
 
 
