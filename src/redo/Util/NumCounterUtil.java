@@ -1,6 +1,8 @@
 package redo.Util;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -70,6 +72,10 @@ public class NumCounterUtil {
             ++counter.computeIfAbsent(key, (x) -> new IntValue()).value;
         }
 
+        public void add(K key, int num) {
+            counter.computeIfAbsent(key, (x) -> new IntValue()).value += num;
+        }
+
         public void minus1(K key) {
             if (counter.containsKey(key)) {
                 IntValue val = counter.get(key);
@@ -87,6 +93,15 @@ public class NumCounterUtil {
         public Set<K> keys() {
             return counter.keySet();
         }
+
+        public List<Integer> values() {
+            List<Integer> list = new ArrayList<>(counter.size());
+            for (IntValue val : counter.values()) {
+                list.add(val.value);
+            }
+            return list;
+        }
+
     }
 
     static class IntValue {

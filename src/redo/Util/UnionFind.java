@@ -18,6 +18,47 @@ import org.junit.Test;
  */
 public class UnionFind {
 
+    public static class RankedUnionFind {
+        int connectedComponentCount, rank[], parent[];
+
+        public RankedUnionFind(int num) {
+            super();
+            rank = new int[num];
+            Arrays.fill(rank, 1);
+            parent = new int[num];
+            Arrays.setAll(parent, (x) -> x);
+            connectedComponentCount = num;
+        }
+
+        public void union(int x, int y) {
+            int typeX = find(x), typeY = find(y);
+            if (typeX == typeY) {
+                return;
+            }
+            if (rank[typeX] > rank[typeY]) {
+                parent[typeY] = typeX;
+            } else if (rank[typeX] < rank[typeY]) {
+                parent[typeX] = y;
+            } else {
+                parent[typeY] = typeX;
+                rank[typeX] += 1;
+            }
+            --connectedComponentCount;
+        }
+
+        public int find(int x) {
+            return parent[x] == x ? x : (x = find(parent[x]));
+        }
+
+        public boolean isConnected(int x, int y) {
+            return find(x) == find(y);
+        }
+
+        public int connectedComponentCount() {
+            return connectedComponentCount;
+        }
+    }
+
     public static class WeightedUnionFind {
         int connectedComponentCount, weight[], parent[];
 
@@ -60,7 +101,7 @@ public class UnionFind {
 
     @Test
     public void test() {
-        WeightedUnionFind uf = new WeightedUnionFind(10);
+        RankedUnionFind uf = new RankedUnionFind(10);
         assertEquals(1, uf.find(1));
         assertEquals(10, uf.connectedComponentCount);
         uf.union(0, 1);

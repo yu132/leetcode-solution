@@ -18,8 +18,9 @@ import org.junit.Test;
  */
 public class MinK {
 
+    // 这个返回的minK是没有顺序的，只是k个最小的值，不保证第k-1位是第k小的数
     @SuppressWarnings("unchecked")
-    public static <T> T[] minK(T[] arr, int k, Comparator<T> comparator) {
+    public static <T> T[] minKList(T[] arr, int k, Comparator<T> comparator) {
 
         if (arr.length == 0) {
             return (T[])new Object[0];
@@ -29,7 +30,7 @@ public class MinK {
 
         int pviotIndex = partition(arr, low, high, comparator);
 
-        while (pviotIndex != k && pviotIndex != k - 1) {
+        while (pviotIndex != k) {
             if (pviotIndex > k) {
                 high = pviotIndex - 1;
             } else {
@@ -39,6 +40,29 @@ public class MinK {
         }
 
         return Arrays.copyOf(arr, k);
+    }
+
+    // 返回准确的第k小的数
+    public static <T> T minK(T[] arr, int k, Comparator<T> comparator) {
+
+        if (arr.length == 0) {
+            return null;
+        }
+
+        int low = 0, high = arr.length - 1;
+
+        int pviotIndex = partition(arr, low, high, comparator);
+
+        while (pviotIndex != k - 1) {
+            if (pviotIndex > k - 1) {
+                high = pviotIndex - 1;
+            } else {
+                low = pviotIndex + 1;
+            }
+            pviotIndex = partition(arr, low, high, comparator);
+        }
+
+        return arr[k - 1];
     }
 
     public static <T> int partition(T[] arr, int low, int high, Comparator<T> comparator) {
@@ -71,7 +95,7 @@ public class MinK {
     public void test2() {
         Integer[] arr = {9, 1, 2, 6, 23, 1, 66, 3, 2, 23, 3};
         Integer[] minKExpected = {1, 1, 2, 2, 3};
-        Integer[] minK = minK(arr, 5, (a, b) -> Integer.compare(a, b));
+        Integer[] minK = minKList(arr, 5, (a, b) -> Integer.compare(a, b));
         Arrays.sort(minK);
         Assert.assertArrayEquals(minKExpected, minK);
     }

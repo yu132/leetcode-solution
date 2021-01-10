@@ -20,6 +20,26 @@ public class Chars {
         return chs;
     }
 
+    public boolean isLowercaseVowel(char ch) {
+        return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
+    }
+
+    public int mappingLowercaseVowel(char ch) {
+        switch (ch) {
+            case 'a':
+                return 0;
+            case 'e':
+                return 1;
+            case 'i':
+                return 2;
+            case 'o':
+                return 3;
+            case 'u':
+                return 4;
+        }
+        throw new RuntimeException("unreachable");
+    }
+
     public boolean[] containChars(String str) {
         boolean[] contains = new boolean[26];
         for (char ch : str.toCharArray()) {

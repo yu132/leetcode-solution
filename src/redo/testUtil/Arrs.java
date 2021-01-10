@@ -2,6 +2,7 @@ package redo.testUtil;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**  
@@ -16,8 +17,15 @@ import java.util.List;
  */
 public class Arrs {
 
+    public static List<List<String>> build2DsL(String str) {
+        return StringList.build2DList(str);
+    }
+
     public static List<List<Integer>> build2DL(String str) {
         str = str.substring(1, str.length() - 1).replaceAll("\\s", "");
+        if (str.equals("")) {
+            return Collections.emptyList();
+        }
         String[] sp = Splits.split(str);
         List<List<Integer>> ans = new ArrayList<>(sp.length);
         for (int i = 0; i < sp.length; ++i) {
@@ -28,6 +36,9 @@ public class Arrs {
 
     public static List<Integer> buildL(String str) {
         str = str.substring(1, str.length() - 1).replaceAll("\\s", "");
+        if (str.equals("")) {
+            return Collections.emptyList();
+        }
         String[] sp = str.split(",");
         List<Integer> ans = new ArrayList<>(sp.length);
         for (int i = 0; i < sp.length; ++i) {
@@ -38,6 +49,9 @@ public class Arrs {
 
     public static int[][] build2D(String str) {
         str = str.substring(1, str.length() - 1).replaceAll("\\s", "");
+        if (str.equals("")) {
+            return new int[0][];
+        }
         String[] sp = Splits.split(str);
         int[][] ans = new int[sp.length][];
         for (int i = 0; i < ans.length; ++i) {

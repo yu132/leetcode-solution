@@ -1,5 +1,6 @@
 package redo.Util.ds.monotonousDeque;
 
+import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
@@ -31,8 +32,8 @@ public class MonotonousDequeUtil {
         }
 
         // 添加元素并且保持单调
-        public void offerAndRemove(int num, Function<Integer, Boolean> monotoner) {
-            while (!deque.isEmpty() && monotoner.apply(deque.peekLast())) {
+        public void offerAndRemove(int num, BiFunction<Integer, Integer, Boolean> monotoner) {
+            while (!deque.isEmpty() && monotoner.apply(deque.peekLast(), num)) {
                 deque.pollLast();
             }
             deque.offerLast(num);
@@ -47,6 +48,10 @@ public class MonotonousDequeUtil {
 
         public int size() {
             return deque.size();
+        }
+
+        public void clear() {
+            deque.clear();
         }
 
         public int start() {
@@ -103,6 +108,10 @@ public class MonotonousDequeUtil {
             public int size() {
                 return end - start;
             }
+
+            public void clear() {
+                start = end = 0;
+            }
         }
     }
 
@@ -117,8 +126,8 @@ public class MonotonousDequeUtil {
         }
 
         // 添加元素并且保持单调
-        public void offerAndRemove(T val, Function<T, Boolean> monotoner) {
-            while (!deque.isEmpty() && monotoner.apply(deque.peekLast())) {
+        public void offerAndRemove(T val, BiFunction<T, T, Boolean> monotoner) {
+            while (!deque.isEmpty() && monotoner.apply(deque.peekLast(), val)) {
                 deque.pollLast();
             }
             deque.offerLast(val);

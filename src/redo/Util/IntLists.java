@@ -41,6 +41,14 @@ public class IntLists {
         return sum;
     }
 
+    public static int sum(int[] nums, int start, int end) {
+        int sum = 0;
+        for (int i = start; i < end; ++i) {
+            sum += nums[i];
+        }
+        return sum;
+    }
+
     public static double mean(int[] nums) {
         int sum = 0;
         for (int num : nums) {
@@ -63,6 +71,16 @@ public class IntLists {
             max = Math.max(max, num);
         }
         return max;
+    }
+
+    public static int[] minMax(int[] nums) {
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        for (int num : nums) {
+            max = Math.max(max, num);
+            min = Math.min(min, num);
+        }
+        return new int[] {min, max};
     }
 
     public static int max(int[] nums, int start, int end) {
