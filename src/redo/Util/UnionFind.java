@@ -2,7 +2,11 @@ package redo.Util;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.junit.Test;
 
@@ -97,6 +101,14 @@ public class UnionFind {
         public int connectedComponentCount() {
             return connectedComponentCount;
         }
+    }
+
+    static List<List<Integer>> group(RankedUnionFind uf, int n) {
+        Map<Integer, List<Integer>> map = new HashMap<>();
+        for (int i = 0; i < n; ++i) {
+            map.computeIfAbsent(uf.find(i), (x) -> new ArrayList<>()).add(i);
+        }
+        return new ArrayList<>(map.values());
     }
 
     @Test

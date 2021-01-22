@@ -90,6 +90,19 @@ public class Arrs {
         return ans;
     }
 
+    public static <T> String toStrL(List<List<T>> list) {
+        if (list.size() == 0) {
+            return "[]";
+        }
+        StringBuilder buf = new StringBuilder();
+        buf.append("[");
+        for (int i = 0; i < list.size() - 1; ++i) {
+            buf.append(list.get(i) + ",");
+        }
+        buf.append(list.get(list.size() - 1) + "]");
+        return buf.toString().replaceAll("\\s", "");
+    }
+
     public static String toStr(List<int[]> list) {
         if (list.size() == 0) {
             return "[]";
@@ -133,4 +146,7 @@ public class Arrs {
         return Arrays.deepToString(obj).replaceAll("\\s", "");
     }
 
+    public static <T> String toLStr(List<T> list) {
+        return list.toString().replaceAll("\\s", "");
+    }
 }

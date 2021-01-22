@@ -1,5 +1,6 @@
 package redo.Util;
 
+import java.util.Map;
 import java.util.function.Consumer;
 
 import model.TreeNode;
@@ -15,6 +16,36 @@ import model.TreeNode;
  *  
  */
 public class Trees {
+
+    // 每个节点对应子树的和
+    public int sumEachNode(TreeNode node, Map<TreeNode, Integer> map) {
+        if (node == null) {
+            return 0;
+        }
+        int sum = node.val + sumEachNode(node.left, map) + sumEachNode(node.right, map);
+        map.put(node, sum);
+        return sum;
+    }
+
+    // 每个节点对应子树的节点数
+    public int countEachNode(TreeNode node, Map<TreeNode, Integer> map) {
+        if (node == null) {
+            return 0;
+        }
+        int sum = 1 + sumEachNode(node.left, map) + sumEachNode(node.right, map);
+        map.put(node, sum);
+        return sum;
+    }
+
+    // 每个节点对应子树的深度
+    public int depthEachNode(TreeNode node, Map<TreeNode, Integer> map) {
+        if (node == null) {
+            return 0;
+        }
+        int depth = 1 + Math.max(depthEachNode(node.left, map), depthEachNode(node.right, map));
+        map.put(node, depth);
+        return depth;
+    }
 
     public void inorder(TreeNode node, Consumer<Integer> visiter) {
         if (node == null) {

@@ -1,9 +1,9 @@
 package redo.Util.ds.trie;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
+import java.util.List;
 import java.util.Set;
+import java.util.TreeMap;
 
 /**  
  * @ClassName: TrieUtil  
@@ -19,7 +19,7 @@ public class TrieUtil {
 
     static class UniqueTrie {
 
-        TrieNode head;
+        TrieNode root = new TrieNode('\0');
 
         Set<String> contains = new HashSet<>();
 
@@ -27,7 +27,7 @@ public class TrieUtil {
             if (contains.contains(str)) {
                 return;
             }
-            TrieNode node = head;
+            TrieNode node = root;
             for (char ch : str.toCharArray()) {
                 node.children.putIfAbsent(ch, new TrieNode(ch));
                 node = node.children.get(ch);
@@ -35,12 +35,18 @@ public class TrieUtil {
             node.isWord = true;
         }
 
+        public void addAll(List<String> strs) {
+            for (String str : strs) {
+                add(str);
+            }
+        }
+
     }
 
     static class TrieNode {
         char ch;
         boolean isWord = false;
-        Map<Character, TrieNode> children = new HashMap<>();
+        TreeMap<Character, TrieNode> children = new TreeMap<>();
 
         public TrieNode(char ch) {
             super();

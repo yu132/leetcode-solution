@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import org.junit.Test;
+
 /**  
  * @ClassName: Prime  
  *
@@ -73,6 +75,13 @@ public class Prime {
             }
         }
         return primes;
+    }
+
+
+
+    @Test
+    public void test() {
+        System.out.println(getPrimes(Integer.MAX_VALUE));
     }
 
     // public static void main(String[] args) {

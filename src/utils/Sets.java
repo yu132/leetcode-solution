@@ -24,4 +24,12 @@ public class Sets {
         return set;
     }
 
+    public static Set<Integer> asSet(int... elements) {
+        Set<Integer> set = new HashSet<>();
+        for (int ele : elements) {
+            set.add(ele);
+        }
+        return set;
+    }
+
 }

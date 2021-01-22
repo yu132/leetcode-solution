@@ -56,6 +56,14 @@ public class Strings {
         return ans;
     }
 
+    public String valueOf(List<Character> chs) {
+        StringBuilder buf = new StringBuilder(chs.size());
+        for (char ch : chs) {
+            buf.append(ch);
+        }
+        return buf.toString();
+    }
+
 
 
     @Test

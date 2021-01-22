@@ -1,5 +1,9 @@
 package redo.Util;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**  
  * @ClassName: Chars  
  *
@@ -13,11 +17,74 @@ package redo.Util;
 public class Chars {
 
     public int[] countLowercaseLetters(String str) {
-        int[] chs = new int[26];
+        int[] count = new int[26];
         for (char ch : str.toCharArray()) {
-            ++chs[ch - 'a'];
+            ++count[ch - 'a'];
         }
-        return chs;
+        return count;
+    }
+
+    // 如果只是判断奇偶性，那么就不需要前缀和，直接用位运算存储即可
+    public int[] prefixOdd(String str) {
+        int[] prefix = new int[str.length() + 1];
+        for (int i = 0; i < str.length(); ++i) {
+            prefix[i + 1] = prefix[i] ^ (1 << (str.charAt(i) - 'a'));
+        }
+        return prefix;
+    }
+
+    // 判断范围内为奇数的数量
+    public int countOdd(int start, int end, int[] prefix) {
+        return Integer.bitCount(prefix[start] ^ prefix[end + 1]);
+    }
+
+    public List<int[]>[] charRange(String str) {
+
+        @SuppressWarnings("unchecked")
+        List<int[]>[] ans = new List[26];
+
+        Arrays.setAll(ans, (x) -> new ArrayList<>());
+
+        for (int i = 0; i < str.length();) {
+            int j = i + 1;
+            while (j < str.length() && str.charAt(j) == str.charAt(i)) {
+                ++j;
+            }
+            ans[str.charAt(i) - 'a'].add(new int[] {i, j});
+            i = j;
+        }
+
+        return ans;
+    }
+
+    public int[][] countLowercaseLettersPrefix(String str) {
+        int[][] countPrefix = new int[str.length() + 1][26];
+        for (int i = 0; i < str.length(); ++i) {
+            for (int j = 0; j < 26; ++j) {
+                if (j == str.charAt(i) - 'a') {
+                    countPrefix[i + 1][j] = countPrefix[i][j] + 1;
+                } else {
+                    countPrefix[i + 1][j] = countPrefix[i][j];
+                }
+            }
+        }
+        return countPrefix;
+    }
+
+    public int[] countLowercaseLetters(char[] chs) {
+        int[] count = new int[26];
+        for (char ch : chs) {
+            ++count[ch - 'a'];
+        }
+        return count;
+    }
+
+    public int[] countUppercaseLetters(String str) {
+        int[] count = new int[26];
+        for (char ch : str.toCharArray()) {
+            ++count[ch - 'A'];
+        }
+        return count;
     }
 
     public boolean isLowercaseVowel(char ch) {

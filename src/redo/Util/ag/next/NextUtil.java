@@ -41,6 +41,28 @@ public class NextUtil {
         }
     }
 
+    // 循环next，注意调用use次数超过n次后不能再调用findNext，否则会出现无限递归引起爆栈
+    static class LoopNextHelper {
+        int[] next;
+
+        LoopNextHelper(int len) {
+            next = new int[len];
+            Arrays.setAll(next, (x) -> x);
+        }
+
+        int findNext(int index) {
+            if (next[index] == index) {
+                return index;
+            } else {
+                return next[index] = findNext(next[index]);
+            }
+        }
+
+        void use(int index) {
+            next[index] = (index + 1 >= next.length ? 0 : index + 1);
+        }
+    }
+
 
 
     @Test

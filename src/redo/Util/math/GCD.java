@@ -22,4 +22,8 @@ public class GCD {
         return m;
     }
 
+    public int mcm(int m, int n) {
+        return m * n / gcd(m, n);
+    }
+
 }

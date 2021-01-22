@@ -26,15 +26,15 @@ public class Maps {
         Map<K, List<E>> map = new HashMap<>();
 
         public void add(K key, E element) {
-            map.computeIfAbsent(key, (x) -> new ArrayList<>()).add(element);
+            get(key).add(element);
         }
 
         public void remove(K key, E element) {
-            map.computeIfAbsent(key, (x) -> new ArrayList<>()).remove(element);
+            get(key).remove(element);
         }
 
         public List<E> get(K key) {
-            return map.getOrDefault(key, Collections.emptyList());
+            return map.computeIfAbsent(key, (x) -> new ArrayList<>());
         }
 
     }

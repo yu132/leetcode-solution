@@ -16,6 +16,18 @@ import java.util.List;
  */
 public class Graphs {
 
+    // 有向图
+    public int[][] toOrderlyAdjacencyArray(int n, int[][] edges, int maxLen) {
+        int[][] distances = new int[n][n];
+        for (int[] arr : distances) {
+            Arrays.fill(arr, maxLen);
+        }
+        for (int[] edge : edges) {
+            distances[edge[0]][edge[1]] = edge[2];
+        }
+        return distances;
+    }
+
     // 无向图
     public int[][] toAdjacencyArray(int n, int[][] edges, int maxLen) {
         int[][] distances = new int[n][n];
@@ -27,6 +39,22 @@ public class Graphs {
             distances[edge[1]][edge[0]] = edge[2];
         }
         return distances;
+    }
+
+    // 有向图
+    public List<Integer>[] toOrderlyAdjacency(int n, int[][] edges) {
+        @SuppressWarnings("unchecked")
+        List<Integer>[] adjacency = new ArrayList[n];
+
+        for (int i = 0; i < adjacency.length; ++i) {
+            adjacency[i] = new ArrayList<>();
+        }
+
+        for (int[] edge : edges) {
+            adjacency[edge[0]].add(edge[1]);
+        }
+
+        return adjacency;
     }
 
     // 无向图

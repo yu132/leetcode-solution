@@ -16,6 +16,44 @@ import redo.testUtil.SortTest;
  */
 public class CountSortUtil {
 
+    // 必须保证count的和等于len
+    public static char[] countSortStr(int[] count, int len) {
+        char[] chs = new char[len];
+        for (int i = 0, index = 0; i < count.length; ++i) {
+            for (int j = 0; j < count[i]; ++j) {
+                chs[index] = (char)(i + 'a');
+            }
+        }
+        return chs;
+    }
+
+    // test by leetcode-1202
+    public static void countSortLowerCase(CharMockArray arr) {
+        int[] count = countLowerCase(arr);
+
+        for (int i = 0, index = 0; i < 26; ++i) {
+            for (int j = 0; j < count[i]; ++j) {
+                arr.set(index++, (char)('a' + i));
+            }
+        }
+    }
+
+    public static int[] countLowerCase(CharMockArray nums) {
+        int[] count = new int[26];
+        for (int i = 0; i < nums.size(); ++i) {
+            ++count[nums.get(i) - 'a'];
+        }
+        return count;
+    }
+
+    static interface CharMockArray {
+        int size();
+
+        char get(int index);
+
+        char set(int index, char val);
+    }
+
     public static void countSort(IntMockArray arr, int start, int end) {
         int[] count = count(arr, start, end);
 

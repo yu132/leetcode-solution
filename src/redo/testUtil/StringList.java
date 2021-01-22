@@ -2,7 +2,7 @@ package redo.testUtil;
 
 import java.util.List;
 
-import redo.Util.Lists;
+import redo.Util.listAndArr.Lists;
 
 /**  
  * @ClassName: StringList  

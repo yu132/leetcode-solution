@@ -144,6 +144,10 @@ public class MonotonousDequeUtil {
             return deque.size();
         }
 
+        public void clear() {
+            deque.clear();
+        }
+
         public int start() {
             return deque.start;
         }
@@ -199,6 +203,10 @@ public class MonotonousDequeUtil {
 
             public int size() {
                 return end - start;
+            }
+
+            public void clear() {
+                start = end = 0;
             }
         }
     }

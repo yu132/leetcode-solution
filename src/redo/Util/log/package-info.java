@@ -41,4 +41,12 @@ package redo.Util.log;
  * 13.开放寻址器，即在数组中找到第一个可以插入位置的工具，利用路径压缩优化复杂度，见ag.next
  * 
  * 14.前缀积，0的处理，如果是从只求i到size-1的积，那么遇到0就可以抛弃前面所有的前缀积，因此必然为0
+ * 
+ * 15.全1的子矩阵计数问题，见ag.array2D.CountAll1SubMatrix
+ * 
+ * 16.替换字串使得整个字符串合法，见ag.subArray.changeToRight
+ * 
+ * 17.最长的符合条件的子数组，见ag.subArray.maxLenSubArr
+ * 
+ * 18.最大字串和，见ag.subArray.maxSubArr
  */

@@ -12,6 +12,6 @@ package redo.Util;
  */
 public class MOD {
 
-    public final static int MOD = 1000000007;
+    public final static int MOD = 1_000_000_007;
 
 }

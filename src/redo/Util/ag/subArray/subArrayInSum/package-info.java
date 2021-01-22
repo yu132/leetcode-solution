@@ -20,6 +20,4 @@ package redo.Util.ag.subArray.subArrayInSum;
  * 
  * 当然，有更简单的方法，即将0-i的前缀和加入到一个Map中，当我们遍历到0-j的情况时，
  * 如果存在0-i的前缀和为sum - sum(0-j)时，i-j的前缀和即为sum，此时就是一个答案
- * 
- * 
  */
