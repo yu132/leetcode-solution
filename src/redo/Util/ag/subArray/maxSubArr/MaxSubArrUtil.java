@@ -30,7 +30,7 @@ public class MaxSubArrUtil {
         int last, max;
         last = max = nums[0];
         for (int i = 1; i < nums.length; ++i) {
-            max = Math.max(max, last = Math.max(last + nums[i], nums[i]));
+            max = Math.max(max, last = nums[i] + Math.max(last, 0));
         }
         return max;
     }

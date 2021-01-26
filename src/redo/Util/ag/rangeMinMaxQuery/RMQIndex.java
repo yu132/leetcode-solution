@@ -18,6 +18,7 @@ import org.junit.Test;
  */
 public class RMQIndex {
 
+    // 查询区间最值的index
     static int[][] rmqMaxIndexInit(int[] arr) {
         int n = arr.length;
         int[][] dp = new int[n][(int)(Math.log(n + 1) / Math.log(2)) + 1];

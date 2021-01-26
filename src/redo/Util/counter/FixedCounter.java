@@ -30,6 +30,9 @@ public class FixedCounter {
         }
 
         int get(int val) {
+            if (val - start < 0 || val - start >= arr.length) {
+                return 0;
+            }
             return arr[val - start];
         }
     }

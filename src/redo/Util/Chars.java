@@ -128,6 +128,21 @@ public class Chars {
             return count[getIndex(ch)];
         }
 
+        public boolean greaterThan(LowercaseLettersCounter counter) {
+            for (int i = 0; i < 26; ++i) {
+                if (this.count[i] < counter.count[i]) {// 相等也可以
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public void maxMerge(LowercaseLettersCounter counter) {
+            for (int i = 0; i < 26; ++i) {
+                this.count[i] = Math.max(this.count[i], counter.count[i]);
+            }
+        }
+
         public void merge(int[] count) {
             for (int i = 0; i < 26; ++i) {
                 this.count[i] += count[i];

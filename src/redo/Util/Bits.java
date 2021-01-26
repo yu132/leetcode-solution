@@ -174,6 +174,11 @@ public class Bits {
         return len;
     }
 
+    // 判断a和b是否同为正或者同为负，0当作正数
+    public boolean isSameSign(int a, int b) {
+        return (a ^ b) >= 0;
+    }
+
     public int negative(int num) {
         return add(~num, 1);
     }
