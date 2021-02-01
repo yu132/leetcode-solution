@@ -49,4 +49,6 @@ package redo.Util.log;
  * 17.最长的符合条件的子数组，见ag.subArray.maxLenSubArr
  * 
  * 18.最大字串和，见ag.subArray.maxSubArr
+ * 
+ * 19.最大距离位置分配问题，见ag.array.maxDisToPlace
  */

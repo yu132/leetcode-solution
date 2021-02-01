@@ -1,6 +1,8 @@
 package redo.Util.listAndArr;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -16,6 +18,17 @@ import java.util.Set;
  *  
  */
 public class IntLists {
+
+    public static void sort(int[] arr, Comparator<Integer> comparator) {
+        Integer[] copy = new Integer[arr.length];
+        for (int i = 0; i < arr.length; ++i) {
+            copy[i] = arr[i];
+        }
+        Arrays.sort(copy, comparator);
+        for (int i = 0; i < arr.length; ++i) {
+            arr[i] = copy[i];
+        }
+    }
 
     public static int[] toIntArray(List<Integer> list) {
         int[] arr = new int[list.size()];

@@ -8,7 +8,7 @@
  * @date 2021年1月5日  
  *  
  */
-package redo.Util.ds.rangeMerge;
+package redo.Util.ag.rangeMerge;
 /*
  * 对于不重复的区间合并问题，可以使用O(n)的速度完成合并过程
  * 通过使用endPoints[][]数组保持区间的范围

@@ -23,4 +23,21 @@ public class Sets {
         return set;
     }
 
+    public static Set<Integer> asSet(int... nums) {
+        Set<Integer> set = new HashSet<>();
+        for (int num : nums) {
+            set.add(num);
+        }
+        return set;
+    }
+
+    @SafeVarargs
+    public static <T> Set<T> asSet(T... nums) {
+        Set<T> set = new HashSet<>();
+        for (T num : nums) {
+            set.add(num);
+        }
+        return set;
+    }
+
 }

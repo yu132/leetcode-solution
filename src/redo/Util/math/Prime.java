@@ -19,6 +19,18 @@ import org.junit.Test;
  */
 public class Prime {
 
+    public boolean isPrime(int n) {
+        if (n < 2) {
+            return false;
+        }
+        for (int i = 2; i * i <= n; ++i) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public int countPrimesNotIncludeN(int n) {
         List<Integer> primes = new ArrayList<Integer>();
         int[] isPrime = new int[n];

@@ -7,9 +7,8 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.junit.Test;
-
 import model.TreeNode;
+import org.junit.Test;
 
 /**  
  * @ClassName: BinaryTreeTestUtil  
@@ -22,6 +21,20 @@ import model.TreeNode;
  *  
  */
 public class BinaryTreeTestUtil {
+
+    public static TreeNode find(TreeNode root, int val) {
+        if (root == null) {
+            return null;
+        }
+        if (root.val == val) {
+            return root;
+        }
+        TreeNode node = find(root.left, val);
+        if (node != null) {
+            return node;
+        }
+        return find(root.right, val);
+    }
 
     public static TreeNode build(String str) {
         if (str == null) {
