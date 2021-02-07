@@ -80,7 +80,30 @@ public class Arrs {
         return ans;
     }
 
+    public static char[][] build2Dc(String str) {
+        str = str.substring(1, str.length() - 1).replaceAll("\\s", "");
+        String[] sp = Splits.split(str);
+        char[][] ans = new char[sp.length][];
+        for (int i = 0; i < ans.length; ++i) {
+            ans[i] = buildChar(sp[i]);
+        }
+        return ans;
+    }
+
+    private static char[] buildChar(String str) {
+        str = str.substring(1, str.length() - 1).replaceAll("\\s", "");
+        String[] sp = str.split(",");
+        char[] ans = new char[sp.length];
+        for (int i = 0; i < ans.length; ++i) {
+            ans[i] = sp[i].charAt(1);
+        }
+        return ans;
+    }
+
     public static int[] build(String str) {
+        if (str.equals("[]")) {
+            return new int[0];
+        }
         str = str.substring(1, str.length() - 1).replaceAll("\\s", "");
         String[] sp = str.split(",");
         int[] ans = new int[sp.length];

@@ -1,21 +1,19 @@
-package lcof;
+package redo.offer2.p02;
 
 /**  
- * @ClassName: M19  
+ * @ClassName: P02_01  
  *
  * @Description: TODO(这里用一句话描述这个类的作用)  
  *
  * @author 余定邦  
  *
- * @date 2020年2月14日  
+ * @date 2021年2月7日  
  *  
  */
-public class M19 {
+public class P02_01 {
 
     class Solution {
-        public boolean isMatch(String s, String p) {
-
-
+        public ListNode removeDuplicateNodes(ListNode head) {
 
         }
     }

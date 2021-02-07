@@ -16,6 +16,29 @@ import org.junit.Test;
  */
 public class BitsMapUtil {
 
+    static class BM {
+        int[] bits;
+
+        public BM(int len) {
+            super();
+            this.bits = new int[(len - 1) / 32 + 1];
+        }
+
+        public void set(int index, int bit) {
+            int i1 = index / 32, i2 = index % 32;
+            if (bit == 1) {
+                bits[i1] |= 1 << i2;
+            } else {
+                bits[i1] &= ~(1 << i2);
+            }
+        }
+
+        public int get(int index) {
+            int i1 = index / 32, i2 = index % 32;
+            return (bits[i1] & (1 << i2)) >> i2;
+        }
+    }
+
     static class BitsMap {
 
         int[] bits;
@@ -74,7 +97,8 @@ public class BitsMapUtil {
                 }
             }
 
-            return ((bits[bits.length - 1] ^ other.bits[bits.length - 1]) | (~lastMask)) == -1;
+            return ((bits[bits.length - 1] ^ other.bits[bits.length - 1])
+                | (~lastMask)) == -1;
         }
     }
 

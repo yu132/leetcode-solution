@@ -12,6 +12,29 @@ package redo.Util.ds.binaryIndexedTree;
  */
 public class SingleUpdateRangeQuery {
 
+    static class BIT {
+        int[] c;
+
+        public BIT(int len) {
+            this.c = new int[len + 1];
+        }
+
+        void add(int index, int val) {
+            for (int i = index + 1; i < c.length; i += i & -i) {
+                c[i] += val;
+            }
+        }
+
+        // exclude index
+        int get(int index) {
+            int sum = 0;
+            for (int i = index; i > 0; i -= i & -i) {
+                sum += c[i];
+            }
+            return sum;
+        }
+    }
+
     public static class BinaryIndexedTree {
         // private int[] a;//真实的数组情况
 
