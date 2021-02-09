@@ -32,7 +32,8 @@ public class RabinKarpUtil {
         ans[0] = (int)hash;
 
         for (int i = len; i < str.length(); ++i) {
-            hash = (hash * base - (str.charAt(i - len) - 'a') * basePowLen % mod + (str.charAt(i) - 'a') + mod) % mod;
+            hash = (hash * base - (str.charAt(i - len) - 'a') * basePowLen % mod
+                + (str.charAt(i) - 'a') + mod) % mod;
             ans[i - len + 1] = (int)hash;
         }
         return ans;
@@ -44,8 +45,10 @@ public class RabinKarpUtil {
         int mod = Integer.MAX_VALUE;// 1000000007
         int[] ans = rabinKarp(str, 10, 29, mod);
         for (int i = 0; i < ans.length; ++i) {
-            System.out.println(ans[i] + " " + rabinKarp(str.substring(i, i + 10), 10, 29, mod)[0]);
-            assertTrue(ans[i] == rabinKarp(str.substring(i, i + 10), 10, 29, mod)[0]);
+            System.out.println(ans[i] + " "
+                + rabinKarp(str.substring(i, i + 10), 10, 29, mod)[0]);
+            assertTrue(
+                ans[i] == rabinKarp(str.substring(i, i + 10), 10, 29, mod)[0]);
         }
     }
 

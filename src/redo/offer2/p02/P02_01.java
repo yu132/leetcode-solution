@@ -1,5 +1,10 @@
 package redo.offer2.p02;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import model.ListNode;
+
 /**  
  * @ClassName: P02_01  
  *
@@ -15,6 +20,21 @@ public class P02_01 {
     class Solution {
         public ListNode removeDuplicateNodes(ListNode head) {
 
+            if (head == null) {
+                return null;
+            }
+
+            Set<Integer> set = new HashSet<>();
+            ListNode node = head;
+            while (node.next != null) {
+                set.add(node.val);
+                if (set.contains(node.next.val)) {
+                    node.next = node.next.next;
+                } else {
+                    node = node.next;
+                }
+            }
+            return head;
         }
     }
 
