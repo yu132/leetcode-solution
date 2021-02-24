@@ -51,7 +51,7 @@ public class UnionFind {
         }
 
         public int find(int x) {
-            return parent[x] == x ? x : (x = find(parent[x]));
+            return parent[x] == x ? x : (parent[x] = find(parent[x]));
         }
 
         public boolean isConnected(int x, int y) {
@@ -91,7 +91,7 @@ public class UnionFind {
         }
 
         public int find(int x) {
-            return parent[x] == x ? x : (x = find(parent[x]));
+            return parent[x] == x ? x : (parent[x] = find(parent[x]));
         }
 
         public boolean isConnected(int x, int y) {
