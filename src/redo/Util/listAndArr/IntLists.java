@@ -132,11 +132,24 @@ public class IntLists {
     }
 
 
-    public static void arrayRotationForward(int[] array, int from, int length, int k) {
+    public static void arrayRotationForward(int[] array, int from, int length,
+        int k) {
         k %= length;
-        reverse(array, from, from + k - 1);
-        reverse(array, from + k, from + length - 1);
-        reverse(array, from, from + length - 1);
+        int mid = from + k;
+        rotate(array, from, mid, from + length);
+    }
+
+    public static void arrayRotationBackward(int[] array, int from, int length,
+        int k) {
+        k %= length;
+        int mid = from + length - k;
+        rotate(array, from, mid, from + length);
+    }
+
+    public static void rotate(int[] array, int from, int mid, int to) {
+        reverse(array, from, mid - 1);
+        reverse(array, mid, to - 1);
+        reverse(array, from, to - 1);
     }
 
     public static void reverse(int[] array, int from, int to) {

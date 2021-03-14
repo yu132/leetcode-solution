@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
 
 import org.junit.Test;
 
@@ -19,6 +20,17 @@ import org.junit.Test;
  *  
  */
 public class Strings {
+
+    void asEachPoint(String str, Consumer<String> consumer) {
+        char[] chs = str.toCharArray();
+
+        for (int i = 0; i < str.length(); ++i) {
+            char temp = chs[i];
+            chs[i] = '.';
+            consumer.accept(String.valueOf(chs));
+            chs[i] = temp;
+        }
+    }
 
     public String repeat(char ch, int times) {
         StringBuilder buf = new StringBuilder(times);
@@ -68,8 +80,10 @@ public class Strings {
 
     @Test
     public void test() {
-        assertEquals(Arrays.asList("1", "2", "3", "4"), splitAndRemoveEmpty("1 2 3 4", ' '));
-        assertEquals(Arrays.asList("1123", "2123", "3123", "4123"), splitAndRemoveEmpty("1123 2123 3123 4123", ' '));
+        assertEquals(Arrays.asList("1", "2", "3", "4"),
+            splitAndRemoveEmpty("1 2 3 4", ' '));
+        assertEquals(Arrays.asList("1123", "2123", "3123", "4123"),
+            splitAndRemoveEmpty("1123 2123 3123 4123", ' '));
         assertEquals(Arrays.asList("1123", "2123", "3123", "4123"),
             splitAndRemoveEmpty("    1123      2123    3123   4123     ", ' '));
     }

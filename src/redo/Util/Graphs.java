@@ -17,31 +17,6 @@ import java.util.List;
 public class Graphs {
 
     // 有向图
-    public int[][] toOrderlyAdjacencyArray(int n, int[][] edges, int maxLen) {
-        int[][] distances = new int[n][n];
-        for (int[] arr : distances) {
-            Arrays.fill(arr, maxLen);
-        }
-        for (int[] edge : edges) {
-            distances[edge[0]][edge[1]] = edge[2];
-        }
-        return distances;
-    }
-
-    // 无向图
-    public int[][] toAdjacencyArray(int n, int[][] edges, int maxLen) {
-        int[][] distances = new int[n][n];
-        for (int[] arr : distances) {
-            Arrays.fill(arr, maxLen);
-        }
-        for (int[] edge : edges) {
-            distances[edge[0]][edge[1]] = edge[2];
-            distances[edge[1]][edge[0]] = edge[2];
-        }
-        return distances;
-    }
-
-    // 有向图
     public List<Integer>[] toOrderlyAdjacency(int n, int[][] edges) {
         @SuppressWarnings("unchecked")
         List<Integer>[] adjacency = new ArrayList[n];
@@ -72,6 +47,41 @@ public class Graphs {
         }
 
         return adjacency;
+    }
+
+    public int[] countEnterDegree(List<Integer>[] graph) {
+        int[] ed = new int[graph.length];
+        for (int i = 0; i < ed.length; ++i) {
+            for (int child : graph[i]) {
+                ++ed[child];
+            }
+        }
+        return ed;
+    }
+
+    // 有向图
+    public int[][] toOrderlyAdjacencyArray(int n, int[][] edges, int maxLen) {
+        int[][] distances = new int[n][n];
+        for (int[] arr : distances) {
+            Arrays.fill(arr, maxLen);
+        }
+        for (int[] edge : edges) {
+            distances[edge[0]][edge[1]] = edge[2];
+        }
+        return distances;
+    }
+
+    // 无向图
+    public int[][] toAdjacencyArray(int n, int[][] edges, int maxLen) {
+        int[][] distances = new int[n][n];
+        for (int[] arr : distances) {
+            Arrays.fill(arr, maxLen);
+        }
+        for (int[] edge : edges) {
+            distances[edge[0]][edge[1]] = edge[2];
+            distances[edge[1]][edge[0]] = edge[2];
+        }
+        return distances;
     }
 
     // 父节点表示法的树结构
