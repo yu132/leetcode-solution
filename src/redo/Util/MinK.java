@@ -20,7 +20,7 @@ public class MinK {
 
     // 这个返回的minK是没有顺序的，只是k个最小的值，不保证第k-1位是第k小的数
     @SuppressWarnings("unchecked")
-    public static <T> T[] minKList(T[] arr, int k, Comparator<T> comparator) {
+    <T> T[] minKList(T[] arr, int k, Comparator<T> comparator) {
 
         if (arr.length == 0) {
             return (T[])new Object[0];
@@ -43,12 +43,12 @@ public class MinK {
     }
 
     // 返回准确的第k大的数
-    public static <T> T maxK(T[] arr, int k, Comparator<T> comparator) {
+    <T> T maxK(T[] arr, int k, Comparator<T> comparator) {
         return minK(arr, arr.length + 1 - k, comparator);
     }
 
     // 返回准确的第k小的数
-    public static <T> T minK(T[] arr, int k, Comparator<T> comparator) {
+    <T> T minK(T[] arr, int k, Comparator<T> comparator) {
 
         if (arr.length == 0) {
             return null;
@@ -70,8 +70,7 @@ public class MinK {
         return arr[k - 1];
     }
 
-    public static <T> int partition(T[] arr, int low, int high,
-        Comparator<T> comparator) {
+    <T> int partition(T[] arr, int low, int high, Comparator<T> comparator) {
         T pivot = arr[low];// 取最低位为主元
         while (low < high) {
             while (low < high && comparator.compare(arr[high], pivot) >= 0) {
@@ -87,6 +86,44 @@ public class MinK {
         return low;
     }
 
+    int maxK(int[] arr, int k) {
+        return minK(arr, arr.length + 1 - k);
+    }
+
+    // 返回准确的第k小的数
+    int minK(int[] arr, int k) {
+
+        int low = 0, high = arr.length - 1;
+
+        int pviotIndex = partition(arr, low, high);
+
+        while (pviotIndex != k - 1) {
+            if (pviotIndex > k - 1) {
+                high = pviotIndex - 1;
+            } else {
+                low = pviotIndex + 1;
+            }
+            pviotIndex = partition(arr, low, high);
+        }
+
+        return arr[k - 1];
+    }
+
+    int partition(int[] arr, int low, int high) {
+        int pivot = arr[low];// 取最低位为主元
+        while (low < high) {
+            while (low < high && arr[high] >= pivot) {
+                --high;
+            }
+            arr[low] = arr[high];
+            while (low < high && arr[low] <= pivot) {
+                ++low;
+            }
+            arr[high] = arr[low];
+        }
+        arr[low] = pivot;
+        return low;
+    }
 
     @Test
     public void test() {

@@ -1,27 +1,16 @@
 package redo.p1100_1199;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import org.junit.Assert;
 import org.junit.Test;
-
 import utils.Sets;
 
-/**  
- * @ClassName: P1169  
- *
- * @Description: TODO(这里用一句话描述这个类的作用)  
- *
- * @author 余定邦  
- *
- * @date 2021年1月14日  
- *  
+import java.util.*;
+
+/**
+ * @author 余定邦
+ * @ClassName: P1169
+ * @Description: TODO(这里用一句话描述这个类的作用)
+ * @date 2021年1月14日
  */
 public class P1169 {
 
@@ -42,7 +31,7 @@ public class P1169 {
 
                 for (int left = 0, mid = 0, right = 0; mid < transactionsList.size(); ++mid) {
                     while (right < transactionsList.size()
-                        && transactionsList.get(right).time <= transactionsList.get(mid).time + 60) {
+                            && transactionsList.get(right).time <= transactionsList.get(mid).time + 60) {
                         citys.plus1(transactionsList.get(right).city);
                         ++right;
                     }
@@ -171,7 +160,7 @@ public class P1169 {
                 int index3 = str.indexOf(',', index2 + 1);
                 String name = str.substring(0, index1), city = str.substring(index3 + 1, str.length());
                 int time = Integer.valueOf(str.substring(index1 + 1, index2)),
-                    amount = Integer.valueOf(str.substring(index2 + 1, index3));
+                        amount = Integer.valueOf(str.substring(index2 + 1, index3));
                 return new Transaction(name, city, time, amount);
             }
 
@@ -183,22 +172,21 @@ public class P1169 {
     }
 
 
-
     @Test
     public void test() {
         Solution s = new Solution();
-        Assert.assertEquals(Sets.asSet("alice,20,800,mtv", "alice,50,100,beijing"),
-            new HashSet<>(s.invalidTransactions(new String[] {"alice,20,800,mtv", "alice,50,100,beijing"})));
+        Assert.assertEquals(Sets.asSets("alice,20,800,mtv", "alice,50,100,beijing"),
+                new HashSet<>(s.invalidTransactions(new String[]{"alice,20,800,mtv", "alice,50,100,beijing"})));
 
-        Assert.assertEquals(Sets.asSet("alice,50,1200,mtv"),
-            new HashSet<>(s.invalidTransactions(new String[] {"alice,20,800,mtv", "alice,50,1200,mtv"})));
+        Assert.assertEquals(Sets.asSets("alice,50,1200,mtv"),
+                new HashSet<>(s.invalidTransactions(new String[]{"alice,20,800,mtv", "alice,50,1200,mtv"})));
 
-        Assert.assertEquals(Sets.asSet("bob,50,1200,mtv"),
-            new HashSet<>(s.invalidTransactions(new String[] {"alice,20,800,mtv", "bob,50,1200,mtv"})));
+        Assert.assertEquals(Sets.asSets("bob,50,1200,mtv"),
+                new HashSet<>(s.invalidTransactions(new String[]{"alice,20,800,mtv", "bob,50,1200,mtv"})));
 
         Assert.assertEquals(
-            Sets.asSet("a,1,10001,b", "a,2,1200,b", "a,3,10001,b", "a,4,1200,c", "a,5,10001,b", "a,6,1200,b"),
-            new HashSet<>(s.invalidTransactions(
-                new String[] {"a,1,10001,b", "a,2,1200,b", "a,3,10001,b", "a,4,1200,c", "a,5,10001,b", "a,6,1200,b"})));
+                Sets.asSets("a,1,10001,b", "a,2,1200,b", "a,3,10001,b", "a,4,1200,c", "a,5,10001,b", "a,6,1200,b"),
+                new HashSet<>(s.invalidTransactions(
+                        new String[]{"a,1,10001,b", "a,2,1200,b", "a,3,10001,b", "a,4,1200,c", "a,5,10001,b", "a,6,1200,b"})));
     }
 }

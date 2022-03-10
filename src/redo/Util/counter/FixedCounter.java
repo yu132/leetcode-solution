@@ -1,17 +1,17 @@
 package redo.Util.counter;
 
-/**  
- * @ClassName: FixedCounter  
- *
- * @Description: TODO(这里用一句话描述这个类的作用)  
- *
- * @author 余定邦  
- *
- * @date 2021年1月21日  
- *  
+/**
+ * @author 余定邦
+ * @ClassName: FixedCounter
+ * @Description: TODO(这里用一句话描述这个类的作用)
+ * @date 2021年1月21日
  */
 public class FixedCounter {
 
+    /**
+     * 相当于计数数组，就是使用数组来进行计数
+     * 可以计数的范围从start开始，到end-1结束
+     */
     static class IntFixedCounter {
 
         int start, arr[];

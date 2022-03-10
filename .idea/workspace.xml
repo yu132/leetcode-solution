@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="939b0656-0831-4bb7-adf0-91c176dc2d93" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="24JfMPhLTPJQrfAapAzIAhrqBEI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../java_workspace/Data  Structure Review" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.saveactions" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\app\eclipse\leetcode\src\note" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.P2156">
+    <configuration name="P2062" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="redo.p2000_2099.P2062" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="redo.p2000_2099.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="P2156" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="redo.p2100_2199.P2156" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="redo.p2100_2199.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="P2170" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="redo.p2100_2199.P2170" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="redo.p2100_2199.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="P1952" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="redo.p1900_1999.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="redo.p1900_1999" />
+      <option name="MAIN_CLASS_NAME" value="redo.p1900_1999.P1952" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="P1952.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="redo.p1900_1999.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="redo.p1900_1999" />
+      <option name="MAIN_CLASS_NAME" value="redo.p1900_1999.P1952" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.P2156" />
+        <item itemvalue="Application.P2170" />
+        <item itemvalue="Application.P2062" />
+        <item itemvalue="JUnit.P1952.test" />
+        <item itemvalue="JUnit.P1952" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="939b0656-0831-4bb7-adf0-91c176dc2d93" name="Default Changelist" comment="" />
+      <created>1643353568240</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1643353568240</updated>
+      <workItem from="1643353572344" duration="1431000" />
+      <workItem from="1643457883720" duration="2830000" />
+      <workItem from="1643801681177" duration="5295000" />
+      <workItem from="1643889486388" duration="3058000" />
+      <workItem from="1644753863568" duration="5492000" />
+      <workItem from="1644839465851" duration="571000" />
+      <workItem from="1644840137368" duration="3725000" />
+      <workItem from="1644854690653" duration="4871000" />
+      <workItem from="1644921170910" duration="1199000" />
+      <workItem from="1646098217765" duration="7359000" />
+      <workItem from="1646220070655" duration="7048000" />
+      <workItem from="1646274403086" duration="3153000" />
+      <workItem from="1646294781290" duration="6603000" />
+      <workItem from="1646313615229" duration="2926000" />
+      <workItem from="1646555045027" duration="4828000" />
+      <workItem from="1646652812039" duration="3437000" />
+      <workItem from="1646828985991" duration="1651000" />
+      <workItem from="1646884518185" duration="4593000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="757" y="158" key="#com.intellij.ide.util.MemberChooser" timestamp="1646653893935">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="757" y="158" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1646653893935" />
+    <state x="476" y="310" width="448" height="220" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1643889619226">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="476" y="310" width="448" height="220" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1643889619226" />
+    <state x="510" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1643802023460">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="510" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1643802023460" />
+    <state x="810" y="170" key="FileChooserDialogImpl" timestamp="1644755406757">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="810" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1644755406757" />
+    <state width="1493" height="110" key="GridCell.Tab.0.bottom" timestamp="1646568374265">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="110" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1646568374265" />
+    <state width="1493" height="110" key="GridCell.Tab.0.center" timestamp="1646568374264">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="110" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1646568374264" />
+    <state width="1493" height="110" key="GridCell.Tab.0.left" timestamp="1646568374264">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="110" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1646568374264" />
+    <state width="1493" height="110" key="GridCell.Tab.0.right" timestamp="1646568374265">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="110" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1646568374265" />
+    <state width="1078" height="2" key="GridCell.Tab.1.bottom" timestamp="1646568374251">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1078" height="2" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1646568374251" />
+    <state width="1078" height="2" key="GridCell.Tab.1.center" timestamp="1646568374251">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1078" height="2" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1646568374251" />
+    <state width="1078" height="2" key="GridCell.Tab.1.left" timestamp="1646568374251">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1078" height="2" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1646568374251" />
+    <state width="1078" height="2" key="GridCell.Tab.1.right" timestamp="1646568374251">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1078" height="2" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1646568374251" />
+    <state x="571" y="125" width="721" height="592" key="NewModule_or_Project.wizard" timestamp="1644755447544">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="571" y="125" width="721" height="592" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1644755447544" />
+    <state x="540" y="75" key="SettingsEditor" timestamp="1646653761202">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="540" y="75" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1646653761202" />
+    <state x="880" y="322" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1643460812438">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="880" y="322" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1643460812438" />
+    <state x="468" y="10" width="600" height="804" key="find.popup" timestamp="1646556638049">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="468" y="10" width="600" height="804" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1646556638049" />
+    <state x="632" y="182" key="run.anything.popup" timestamp="1643805487183">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="632" y="182" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1643805487183" />
+    <state x="729" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1646888237250">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="729" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1646888237250" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/redo/p2100_2199/P2170.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/redo/p2100_2199/P2170.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

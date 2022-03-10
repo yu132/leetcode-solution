@@ -1,22 +1,17 @@
 package redo.p0900_0999;
 
+import org.junit.Assert;
+import org.junit.Test;
+import utils.Sets;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.Assert;
-import org.junit.Test;
-
-import utils.Sets;
-
-/**  
- * @ClassName: P967  
- *
- * @Description: TODO(这里用一句话描述这个类的作用)  
- *
- * @author 余定邦  
- *
- * @date 2021年1月21日  
- *  
+/**
+ * @author 余定邦
+ * @ClassName: P967
+ * @Description: TODO(这里用一句话描述这个类的作用)
+ * @date 2021年1月21日
  */
 public class P967 {
 
@@ -55,17 +50,16 @@ public class P967 {
     }
 
 
-
     @Test
     public void test() {
         Solution s = new Solution();
         Assert.assertEquals(5, s.numsSameConsecDiff(3, 7).length);
         Assert.assertEquals(Sets.asSet(181, 292, 707, 818, 929), Sets.asSet(s.numsSameConsecDiff(3, 7)));
         Assert.assertEquals(Sets.asSet(10, 12, 21, 23, 32, 34, 43, 45, 54, 56, 65, 67, 76, 78, 87, 89, 98),
-            Sets.asSet(s.numsSameConsecDiff(2, 1)));
+                Sets.asSet(s.numsSameConsecDiff(2, 1)));
         Assert.assertEquals(Sets.asSet(11, 22, 33, 44, 55, 66, 77, 88, 99).size(), s.numsSameConsecDiff(2, 0).length);
         Assert.assertEquals(Sets.asSet(11, 22, 33, 44, 55, 66, 77, 88, 99), Sets.asSet(s.numsSameConsecDiff(2, 0)));
         Assert.assertEquals(Sets.asSet(13, 20, 24, 31, 35, 42, 46, 53, 57, 64, 68, 75, 79, 86, 97),
-            Sets.asSet(s.numsSameConsecDiff(2, 2)));
+                Sets.asSet(s.numsSameConsecDiff(2, 2)));
     }
 }

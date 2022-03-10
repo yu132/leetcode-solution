@@ -1,25 +1,18 @@
 package redo.Util.listAndArr;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.function.Function;
 
-/**  
- * @ClassName: IntLists  
- *
- * @Description: TODO(这里用一句话描述这个类的作用)  
- *
- * @author 余定邦  
- *
- * @date 2020年12月29日  
- *  
+/**
+ * @author 余定邦
+ * @ClassName: IntLists
+ * @Description: TODO(这里用一句话描述这个类的作用)
+ * @date 2020年12月29日
  */
 public class IntLists {
 
-    public static void sort(int[] arr, Comparator<Integer> comparator) {
+    void sort(int[] arr, Comparator<Integer> comparator) {
         Integer[] copy = new Integer[arr.length];
         for (int i = 0; i < arr.length; ++i) {
             copy[i] = arr[i];
@@ -30,7 +23,7 @@ public class IntLists {
         }
     }
 
-    public static int[] toIntArray(List<Integer> list) {
+    int[] toIntArray(List<Integer> list) {
         int[] arr = new int[list.size()];
         for (int i = 0; i < arr.length; ++i) {
             arr[i] = list.get(i);
@@ -38,7 +31,15 @@ public class IntLists {
         return arr;
     }
 
-    public static List<Integer> toIntList(int[] nums) {
+    <E> int[] toIntArray(List<E> list, Function<E, Integer> valueTaker) {
+        int[] arr = new int[list.size()];
+        for (int i = 0; i < arr.length; ++i) {
+            arr[i] = valueTaker.apply(list.get(i));
+        }
+        return arr;
+    }
+
+    List<Integer> toIntList(int[] nums) {
         List<Integer> ans = new ArrayList<>(nums.length);
         for (int num : nums) {
             ans.add(num);
@@ -46,7 +47,7 @@ public class IntLists {
         return ans;
     }
 
-    public static Set<Integer> toSet(int[] nums) {
+    Set<Integer> toSet(int[] nums) {
         Set<Integer> set = new HashSet<>();
         for (int num : nums) {
             set.add(num);
@@ -54,7 +55,7 @@ public class IntLists {
         return set;
     }
 
-    public static int sum(int[] nums) {
+    int sum(int[] nums) {
         int sum = 0;
         for (int num : nums) {
             sum += num;
@@ -62,7 +63,7 @@ public class IntLists {
         return sum;
     }
 
-    public static int sum(int[] nums, int start, int end) {
+    int sum(int[] nums, int start, int end) {
         int sum = 0;
         for (int i = start; i < end; ++i) {
             sum += nums[i];
@@ -70,15 +71,15 @@ public class IntLists {
         return sum;
     }
 
-    public static double mean(int[] nums) {
+    double mean(int[] nums) {
         int sum = 0;
         for (int num : nums) {
             sum += num;
         }
-        return (double)sum / nums.length;
+        return (double) sum / nums.length;
     }
 
-    public static int product(int[] nums, int start, int end) {
+    int product(int[] nums, int start, int end) {
         int product = 1;
         for (int i = start; i < end; ++i) {
             product *= nums[i];
@@ -86,7 +87,7 @@ public class IntLists {
         return product;
     }
 
-    public static int max(int[] nums) {
+    int max(int[] nums) {
         int max = Integer.MIN_VALUE;
         for (int num : nums) {
             max = Math.max(max, num);
@@ -94,7 +95,7 @@ public class IntLists {
         return max;
     }
 
-    public static int maxIndex(int[] nums, int start, int end) {
+    int maxIndex(int[] nums, int start, int end) {
         int max = nums[start], maxIndex = start;
         for (int i = start + 1; i < end; ++i) {
             if (nums[i] > max) {
@@ -105,17 +106,17 @@ public class IntLists {
         return maxIndex;
     }
 
-    public static int[] minMax(int[] nums) {
+    int[] minMax(int[] nums) {
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
         for (int num : nums) {
             max = Math.max(max, num);
             min = Math.min(min, num);
         }
-        return new int[] {min, max};
+        return new int[]{min, max};
     }
 
-    public static int max(int[] nums, int start, int end) {
+    int max(int[] nums, int start, int end) {
         int max = Integer.MIN_VALUE;
         for (int i = start; i < end; ++i) {
             max = Math.max(max, nums[i]);
@@ -123,7 +124,7 @@ public class IntLists {
         return max;
     }
 
-    public static List<Integer> range(int start, int end) {
+    List<Integer> range(int start, int end) {
         List<Integer> list = new ArrayList<>(end - start);
         for (int i = start; i < end; ++i) {
             list.add(i);
@@ -132,39 +133,45 @@ public class IntLists {
     }
 
 
-    public static void arrayRotationForward(int[] array, int from, int length,
-        int k) {
+    void arrayRotationForward(int[] array, int from, int length, int k) {
         k %= length;
         int mid = from + k;
         rotate(array, from, mid, from + length);
     }
 
-    public static void arrayRotationBackward(int[] array, int from, int length,
-        int k) {
+    void arrayRotationBackward(int[] array, int from, int length, int k) {
         k %= length;
         int mid = from + length - k;
         rotate(array, from, mid, from + length);
     }
 
-    public static void rotate(int[] array, int from, int mid, int to) {
+    void rotate(int[] array, int from, int mid, int to) {
         reverse(array, from, mid - 1);
         reverse(array, mid, to - 1);
         reverse(array, from, to - 1);
     }
 
-    public static void reverse(int[] array, int from, int to) {
+    void reverse(int[] array, int from, int to) {
         for (; from < to; ++from, --to) {
             swap(array, from, to);
         }
     }
 
-    public static void swap(int[] array, int x, int y) {
+    void swap(int[] array, int x, int y) {
         int num = array[x];
         array[x] = array[y];
         array[y] = num;
     }
 
-    public int unique(int[] nums) {
+    void shuffle(int[] nums) {
+        ThreadLocalRandom r = ThreadLocalRandom.current();
+        for (int i = nums.length - 1; i >= 1; --i) {
+            int IndexToSwap = r.nextInt(i + 1);
+            swap(nums, i, IndexToSwap);
+        }
+    }
+
+    int unique(int[] nums) {
         if (nums.length == 0) {
             return 0;
         }
@@ -177,7 +184,7 @@ public class IntLists {
         return indexToFill;
     }
 
-    public List<Range> splitBy(int val, int[] nums) {
+    List<Range> splitBy(int val, int[] nums) {
         List<Range> splitIndex = new ArrayList<>();
         int start = 0;
         for (int i = 0; i < nums.length; ++i) {
@@ -206,7 +213,7 @@ public class IntLists {
             this.end = end;
         }
 
-        public boolean isValueInRange(int value) {
+        boolean isValueInRange(int value) {
             return start <= value && value <= end;
         }
     }

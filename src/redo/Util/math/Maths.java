@@ -1,14 +1,10 @@
 package redo.Util.math;
 
-/**  
- * @ClassName: Maths  
- *
- * @Description: TODO(这里用一句话描述这个类的作用)  
- *
- * @author 余定邦  
- *
- * @date 2020年12月26日  
- *  
+/**
+ * @author 余定邦
+ * @ClassName: Maths
+ * @Description: TODO(这里用一句话描述这个类的作用)
+ * @date 2020年12月26日
  */
 public class Maths {
 
@@ -23,7 +19,11 @@ public class Maths {
     }
 
     public int sum1toN(int N) {
-        return (int)((long)N * (N + 1) / 2);
+        return (int) ((long) N * (N + 1) / 2);
+    }
+
+    public int square(int num) {
+        return num * num;
     }
 
 }

@@ -25,5 +25,5 @@ package redo.Util.ag.subSeq.longestCommonSubSeq;
  *  c[i,j]= {   c[i-1,j-1]+1                if  i>0 && j>0 && a[i]=b[j]
  *          {   max{c[i-1,j], c[i,j-1]}     if  i>0 && j>0 && a[i]!=b[j]
  *          
- * 例子见leetcode-1143，使用了滚动数组优化空间为O(n)
+ * 例子见leetcode-1143，使用了滚动数组优化空间为O(n) P1143
  */

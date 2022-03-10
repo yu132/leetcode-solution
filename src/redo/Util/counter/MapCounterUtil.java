@@ -1,20 +1,12 @@
 package redo.Util.counter;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
-/**  
- * @ClassName: MapCounterUtil  
- *
- * @Description: TODO(这里用一句话描述这个类的作用)  
- *
- * @author 余定邦  
- *
- * @date 2021年1月21日  
- *  
+/**
+ * @author 余定邦
+ * @ClassName: MapCounterUtil
+ * @Description: TODO(这里用一句话描述这个类的作用)
+ * @date 2021年1月21日
  */
 public class MapCounterUtil {
 
@@ -24,6 +16,14 @@ public class MapCounterUtil {
             max = Math.max(max, value.value);
         }
         return max;
+    }
+
+    public static <K> Counter<K> toCounter(K[] array) {
+        Counter<K> counter = new Counter<>();
+        for (K item : array) {
+            counter.plus1(item);
+        }
+        return counter;
     }
 
     static class Counter<K> {

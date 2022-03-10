@@ -2,22 +2,19 @@ package redo.Util;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
-/**  
- * @ClassName: Grapg  
- *
- * @Description: TODO(这里用一句话描述这个类的作用)  
- *
- * @author 余定邦  
- *
- * @date 2021年1月6日  
- *  
+/**
+ * @author 余定邦
+ * @ClassName: Grapg
+ * @Description: TODO(这里用一句话描述这个类的作用)
+ * @date 2021年1月6日
  */
-public class Graphs {
+class Graphs {
 
     // 有向图
-    public List<Integer>[] toOrderlyAdjacency(int n, int[][] edges) {
+    List<Integer>[] toOrderlyAdjacency(int n, int[][] edges) {
         @SuppressWarnings("unchecked")
         List<Integer>[] adjacency = new ArrayList[n];
 
@@ -33,7 +30,7 @@ public class Graphs {
     }
 
     // 无向图
-    public List<Integer>[] toAdjacency(int n, int[][] edges) {
+    List<Integer>[] toAdjacency(int n, int[][] edges) {
         @SuppressWarnings("unchecked")
         List<Integer>[] adjacency = new ArrayList[n];
 
@@ -49,7 +46,7 @@ public class Graphs {
         return adjacency;
     }
 
-    public int[] countEnterDegree(List<Integer>[] graph) {
+    int[] countEnterDegree(List<Integer>[] graph) {
         int[] ed = new int[graph.length];
         for (int i = 0; i < ed.length; ++i) {
             for (int child : graph[i]) {
@@ -60,7 +57,7 @@ public class Graphs {
     }
 
     // 有向图
-    public int[][] toOrderlyAdjacencyArray(int n, int[][] edges, int maxLen) {
+    int[][] toOrderlyAdjacencyArray(int n, int[][] edges, int maxLen) {
         int[][] distances = new int[n][n];
         for (int[] arr : distances) {
             Arrays.fill(arr, maxLen);
@@ -72,7 +69,7 @@ public class Graphs {
     }
 
     // 无向图
-    public int[][] toAdjacencyArray(int n, int[][] edges, int maxLen) {
+    int[][] toAdjacencyArray(int n, int[][] edges, int maxLen) {
         int[][] distances = new int[n][n];
         for (int[] arr : distances) {
             Arrays.fill(arr, maxLen);
@@ -85,7 +82,7 @@ public class Graphs {
     }
 
     // 父节点表示法的树结构
-    public List<Integer>[] toAdjacency(int n, int[] parents) {
+    List<Integer>[] toAdjacency(int n, int[] parents) {
         @SuppressWarnings("unchecked")
         List<Integer>[] adjacency = new ArrayList[n];
 
@@ -103,6 +100,57 @@ public class Graphs {
         return adjacency;
     }
 
+    /**
+     * 寻找两点之间是否有路径
+     *
+     * @param adjacency
+     * @param from
+     * @param to
+     * @param n
+     * @return
+     */
+    boolean findPath(List<Integer>[] adjacency, int from, int to, int n) {
+        boolean[] visited = new boolean[n];
+
+        LinkedList<Integer> queue = new LinkedList<>();
+
+        queue.offer(from);
+
+        while (!queue.isEmpty()) {
+            int node = queue.poll();
+            if (visited[node]) {
+                continue;
+            }
+            visited[node] = true;
+            if (node == to) {
+                return true;
+            }
+            queue.addAll(adjacency[node]);
+        }
+
+        return false;
+    }
+
+
+    int furthestNode(int node, int n, List<Integer>[] graph) {
+        return furthestNodeHelper(node, 0, graph, new boolean[n])[0];
+    }
+
+    int[] furthestNodeHelper(int node, int level, List<Integer>[] graph,
+                             boolean[] visited) {
+        if (visited[node]) {
+            return new int[]{-1, 0};
+        }
+        visited[node] = true;
+        int[] maxDis = {node, level};
+        for (int child : graph[node]) {
+            int[] ret = furthestNodeHelper(child, level + 1, graph, visited);
+            if (ret[1] > maxDis[1]) {
+                maxDis = ret;
+            }
+        }
+        return maxDis;
+    }
 
 
 }

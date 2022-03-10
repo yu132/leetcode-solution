@@ -1,25 +1,16 @@
 package redo.p0800_0899;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-
 import org.junit.Assert;
 import org.junit.Test;
-
 import utils.Sets;
 
-/**  
- * @ClassName: P811  
- *
- * @Description: TODO(这里用一句话描述这个类的作用)  
- *
- * @author 余定邦  
- *
- * @date 2020年12月21日  
- *  
+import java.util.*;
+
+/**
+ * @author 余定邦
+ * @ClassName: P811
+ * @Description: TODO(这里用一句话描述这个类的作用)
+ * @date 2020年12月21日
  */
 public class P811 {
 
@@ -47,18 +38,17 @@ public class P811 {
     }
 
 
-
     @Test
     public void test() {
         Solution s = new Solution();
-        Assert.assertEquals(Sets.asSet("9001 discuss.leetcode.com", "9001 leetcode.com", "9001 com"),
-            new HashSet<>(s.subdomainVisits(new String[] {"9001 discuss.leetcode.com"})));
+        Assert.assertEquals(Sets.asSets("9001 discuss.leetcode.com", "9001 leetcode.com", "9001 com"),
+                new HashSet<>(s.subdomainVisits(new String[]{"9001 discuss.leetcode.com"})));
 
         Assert.assertEquals(
-            Sets.asSet("901 mail.com", "50 yahoo.com", "900 google.mail.com", "5 wiki.org", "5 org", "1 intel.mail.com",
-                "951 com"),
-            new HashSet<>(s.subdomainVisits(
-                new String[] {"900 google.mail.com", "50 yahoo.com", "1 intel.mail.com", "5 wiki.org"})));
+                Sets.asSets("901 mail.com", "50 yahoo.com", "900 google.mail.com", "5 wiki.org", "5 org", "1 intel.mail.com",
+                        "951 com"),
+                new HashSet<>(s.subdomainVisits(
+                        new String[]{"900 google.mail.com", "50 yahoo.com", "1 intel.mail.com", "5 wiki.org"})));
 
     }
 

@@ -1,25 +1,17 @@
 package redo.Util.ag.rabinKarp;
 
-import static org.junit.Assert.*;
-
 import java.util.function.BiConsumer;
 
-import org.junit.Test;
-
-/**  
- * @ClassName: RabinKarpUtil  
- *
- * @Description: TODO(这里用一句话描述这个类的作用)  
- *
- * @author 余定邦  
- *
- * @date 2021年1月11日  
- *  
+/**
+ * @author 余定邦
+ * @ClassName: RabinKarpUtil
+ * @Description: 字符串滚动哈希
+ * @date 2021年1月11日
  */
 public class RabinKarpUtil {
 
     public static void forEachStrAndHash(String str, int len,
-        BiConsumer<String, Integer> consumer) {
+                                         BiConsumer<String, Integer> consumer) {
 
         int[] hash = rabinKarp(str, len);
 
@@ -36,7 +28,7 @@ public class RabinKarpUtil {
 
     // 产生所有长度为len的哈希值
     public static int[] rabinKarp(String str, int len, int base, int mod,
-        char startCh) {
+                                  char startCh) {
 
         long hash = 0, basePowLen = 1;
         for (int i = 0; i < len; ++i) {
@@ -45,13 +37,13 @@ public class RabinKarpUtil {
         }
 
         int[] ans = new int[str.length() - len + 1];
-        ans[0] = (int)hash;
+        ans[0] = (int) hash;
 
         for (int i = len; i < str.length(); ++i) {
             hash = (hash * base
-                - (str.charAt(i - len) - startCh) * basePowLen % mod
-                + (str.charAt(i) - startCh) + mod) % mod;
-            ans[i - len + 1] = (int)hash;
+                    - (str.charAt(i - len) - startCh) * basePowLen % mod
+                    + (str.charAt(i) - startCh) + mod) % mod;
+            ans[i - len + 1] = (int) hash;
         }
         return ans;
     }

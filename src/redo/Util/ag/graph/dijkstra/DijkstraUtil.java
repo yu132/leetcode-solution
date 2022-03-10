@@ -1,24 +1,21 @@
 package redo.Util.ag.graph.dijkstra;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
 
-/**  
- * @ClassName: DijkstraUtil  
- *
- * @Description: TODO(这里用一句话描述这个类的作用)  
- *
- * @author 余定邦  
- *
- * @date 2021年1月15日  
- *  
+/**
+ * @author 余定邦
+ * @ClassName: DijkstraUtil
+ * @Description: TODO(这里用一句话描述这个类的作用)
+ * @date 2021年1月15日
  */
 public class DijkstraUtil {
 
     // 对所有点进行最短路径求解，邻接的两点距离为1
     static int[] dijkstraAllPoint(int n, List<Integer>[] adjacencyList, int start) {
-        PriorityQueue<Data> pq = new PriorityQueue<>((a, b) -> Integer.compare(a.dis, b.dis));
+        PriorityQueue<Data> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a.dis));
         int[] distance = new int[n];
         Arrays.fill(distance, -1);
         distance[start] = 0;

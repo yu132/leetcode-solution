@@ -1,24 +1,19 @@
 package redo.p0400_0499;
 
-import static org.junit.Assert.*;
+import org.junit.Test;
+import utils.Sets;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
-import utils.Sets;
-
-/**  
- * @ClassName: P401  
- *
- * @Description: TODO(这里用一句话描述这个类的作用)  
- *
- * @author 余定邦  
- *
- * @date 2020年12月19日  
- *  
+/**
+ * @author 余定邦
+ * @ClassName: P401
+ * @Description: TODO(这里用一句话描述这个类的作用)
+ * @date 2020年12月19日
  */
 public class P401 {
 
@@ -70,10 +65,10 @@ public class P401 {
     @Test
     public void test() {
         Solution s = new Solution();
-        assertEquals(Sets.asSet("1:00", "2:00", "4:00", "8:00", "0:01", "0:02", "0:04", "0:08", "0:16", "0:32"),
-            new HashSet<>(s.readBinaryWatch(1)));
-        assertEquals(Sets.asSet("11:59", "11:55", "11:47", "11:31", "7:59", "7:55", "7:47", "7:31"),
-            new HashSet<>(s.readBinaryWatch(8)));
+        assertEquals(Sets.asSets("1:00", "2:00", "4:00", "8:00", "0:01", "0:02", "0:04", "0:08", "0:16", "0:32"),
+                new HashSet<>(s.readBinaryWatch(1)));
+        assertEquals(Sets.asSets("11:59", "11:55", "11:47", "11:31", "7:59", "7:55", "7:47", "7:31"),
+                new HashSet<>(s.readBinaryWatch(8)));
     }
 
 }
