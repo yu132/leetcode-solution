@@ -10,22 +10,6 @@ import java.util.*;
  */
 public class MapCounterUtil {
 
-    public <K> int maxCount(Counter<K> counter) {
-        int max = Integer.MIN_VALUE;
-        for (Counter.IntValue value : counter.counter.values()) {
-            max = Math.max(max, value.value);
-        }
-        return max;
-    }
-
-    public <K> Counter<K> toCounter(K[] array) {
-        Counter<K> counter = new Counter<>();
-        for (K item : array) {
-            counter.plus1(item);
-        }
-        return counter;
-    }
-
     class Counter<K> {
 
         private Map<K, IntValue> counter;
@@ -100,6 +84,23 @@ public class MapCounterUtil {
             int value = 0;
         }
     }
+
+    public int maxCount(Counter<?> counter) {
+        int max = Integer.MIN_VALUE;
+        for (Counter<?>.IntValue value : counter.counter.values()) {
+            max = Math.max(max, value.value);
+        }
+        return max;
+    }
+
+    public <K> Counter<K> toCounter(K[] array) {
+        Counter<K> counter = new Counter<>();
+        for (K item : array) {
+            counter.plus1(item);
+        }
+        return counter;
+    }
+
 
     class OrderCounter<K extends Comparable<K>> {
         private TreeMap<K, IntValue> counter = new TreeMap<>();

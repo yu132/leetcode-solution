@@ -29,7 +29,7 @@ public class TrieUtil {
             node.isWord = true;
             return added;
         }
-        
+
         public boolean contains(String str) {
             SimpleTrieNode node = root;
             for (char ch : str.toCharArray()) {
@@ -40,17 +40,51 @@ public class TrieUtil {
             }
             return node.isWord;
         }
-    }
 
-    class SimpleTrieNode {
-        char ch;
-        boolean isWord;
-        SimpleTrieNode[] children = new SimpleTrieNode[26];
+        class SimpleTrieNode {
+            char ch;
+            boolean isWord;
+            SimpleTrieNode[] children = new SimpleTrieNode[26];
 
-        public SimpleTrieNode(char ch) {
-            this.ch = ch;
+            public SimpleTrieNode(char ch) {
+                this.ch = ch;
+            }
         }
     }
+
+    /**
+     * 模糊搜索字典树，允许有几个位置不同，且所有单词的长度均相同，没有长度上的差异
+     *
+     * @param tree       树
+     * @param str        待匹配的字符串
+     * @param fuzzyCount 允许有几个地方不同
+     * @return
+     */
+    public boolean containsWithFizz(SimpleTire tree, String str, int fuzzyCount) {
+        return containsWithFizz(str, 0, tree.root, fuzzyCount);
+    }
+
+    public boolean containsWithFizz(String str, int index, SimpleTire.SimpleTrieNode node, int fuzzyCount) {
+        if (null == node) {
+            return false;
+        }
+        if (index == str.length()) {
+            return node.isWord;
+        }
+        if (node.children[str.charAt(index) - 'a'] != null
+                && containsWithFizz(str, index + 1, node.children[str.charAt(index) - 'a'], fuzzyCount)) {
+            return true;
+        }
+        if (fuzzyCount > 0) {
+            for (int i = 0; i < 26; ++i) {
+                if (containsWithFizz(str, index + 1, node.children[i], fuzzyCount - 1)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
 
     static class UniqueTrie {
 

@@ -39,6 +39,30 @@ public class Trees {
         return head;
     }
 
+    /**
+     * 将树按层级展平成列表，每层一个列表，按照从左到右的顺序排序
+     *
+     * @param root
+     * @return
+     */
+    List<List<Integer>> flatByLevel(TreeNode root) {
+        List<List<Integer>> collector = new ArrayList<>();
+        dfsHelperFlatByLevel(root, 0, collector);
+        return collector;
+    }
+
+    void dfsHelperFlatByLevel(TreeNode node, int level, List<List<Integer>> collector) {
+        if (null == node) {
+            return;
+        }
+        if (collector.size() == level) {
+            collector.add(new ArrayList<>());
+        }
+        collector.get(level).add(node.val);
+        dfsHelperFlatByLevel(node.left, level + 1, collector);
+        dfsHelperFlatByLevel(node.right, level + 1, collector);
+    }
+
     public class PTreeNode {
         int val;
         PTreeNode left;
@@ -168,6 +192,93 @@ public class Trees {
             return 0;
         }
         return node.val + sum(node.left) + sum(node.right);
+    }
+
+    TreeNode minRight(TreeNode node) {
+        TreeNode n = node.right;
+        if (n == null) {
+            return null;
+        }
+        while (n.left != null) {
+            n = n.left;
+        }
+        return n;
+    }
+
+    List<TreeNode> ancestorsOf(TreeNode node, TreeNode root) {
+        List<TreeNode> ans = new ArrayList<>();
+        ancestorsOfHelper(node, root, ans);
+        return ans;
+    }
+
+    boolean ancestorsOfHelper(TreeNode target, TreeNode now, List<TreeNode> ans) {
+        if (now == null) {
+            return false;
+        }
+        if (now == target) {
+            return true;
+        }
+        ans.add(now);
+        if (ancestorsOfHelper(target.left, now, ans)) {
+            return true;
+        }
+        if (ancestorsOfHelper(target.right, now, ans)) {
+            return true;
+        }
+        ans.remove(ans.size() - 1);
+        return false;
+    }
+
+    /**
+     * 找到一棵树中小于等于目标值的最大值
+     *
+     * @param root
+     * @param val
+     * @return
+     */
+    public int findMaxEqualSmaller(TreeNode root, int val) {
+        if (null == root) {
+            return -1;
+        }
+        if (root.val == val) {
+            return val;
+        }
+        if (root.val < val) {
+            int dd = findMaxEqualSmaller(root.right, val);
+            if (-1 == dd || dd < root.val) {
+                return root.val;
+            } else {
+                return dd;
+            }
+        } else {
+            return findMaxEqualSmaller(root.left, val);
+        }
+    }
+
+    /**
+     * 找到一棵树中大于等于目标值的最小值
+     *
+     * @param root
+     * @param val
+     * @return
+     */
+    public int findMinEqualLager(TreeNode root, int val) {
+        if (null == root) {
+            return -1;
+        }
+        if (root.val == val) {
+            return val;
+        }
+        if (root.val < val) {
+            return findMinEqualLager(root.right, val);
+        } else {
+            int dd = findMinEqualLager(root.left, val);
+            if (-1 == dd || dd > root.val) {
+                return root.val;
+            } else {
+                return dd;
+            }
+        }
     }
 
 }

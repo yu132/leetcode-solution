@@ -10,6 +10,35 @@ import model.ListNode;
  */
 public class LinkedLists {
 
+    //插入有序链表，保证插入后依然有序
+    ListNode insertOrderly(ListNode head, int val) {
+        if (val < head.val) {
+            ListNode node = new ListNode(val);
+            node.next = head;
+            return node;
+        }
+        boolean inserted = false;
+        ListNode hh = head;
+        while (head.next != null) {
+            if (head.val <= val && val < head.next.val) {
+                insertAfter(head, val);
+                inserted = true;
+                break;
+            }
+            head = head.next;
+        }
+        if (!inserted) {
+            insertAfter(head, val);
+        }
+        return hh;
+    }
+
+    void insertAfter(ListNode node, int val) {
+        ListNode newNode = new ListNode(val);
+        newNode.next = node.next;
+        node.next = newNode;
+    }
+
     //返回倒数第k个节点，必须保证k小于链表长度
     ListNode lastK(ListNode head, int k) {
         ListNode fast = head, slow = head;

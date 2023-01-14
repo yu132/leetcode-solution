@@ -1,18 +1,14 @@
 package redo.Util.listAndArr;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.Test;
 
-/**  
- * @ClassName: CharsList  
- *
- * @Description: TODO(这里用一句话描述这个类的作用)  
- *
- * @author 余定邦  
- *
- * @date 2021年1月3日  
- *  
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
+/**
+ * @author 余定邦
+ * @ClassName: CharsList
+ * @Description: TODO(这里用一句话描述这个类的作用)
+ * @date 2021年1月3日
  */
 public class CharList {
 

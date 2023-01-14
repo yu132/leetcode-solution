@@ -8,6 +8,8 @@ package redo.Util.math;
  */
 public class BigNumMod {
 
+    public final static int MOD = 1_000_000_007;
+
     int add(long a, long b, int mod) {
         return (int) ((a % mod + b % mod) % mod);
     }

@@ -18,6 +18,25 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 public class Strings {
 
+    public int countCharInStr(String str, char ch) {
+        int count = 0;
+        for (char c : str.toCharArray()) {
+            if (c == ch) {
+                ++count;
+            }
+        }
+        return count;
+    }
+
+    //str中必须仅包含小写字符，计算每个小写字符的数量
+    public int[] countLowercaseLetters(String str) {
+        int[] count = new int[26];
+        for (char ch : str.toCharArray()) {
+            ++count[ch - 'a'];
+        }
+        return count;
+    }
+
     //消费字符串中包含完全相同字符的字串的开始和结尾
     void consumeSameCharSubStr(String s, BiConsumer<Integer, Integer> biConsumer) {
         for (int index = 0; index < s.length(); ) {
@@ -84,14 +103,6 @@ public class Strings {
 
     public String reverse(String str) {
         return new StringBuilder(str).reverse().toString();
-    }
-
-    public int[] countLowercaseLetters(String str) {
-        int[] count = new int[26];
-        for (char ch : str.toCharArray()) {
-            ++count[ch - 'a'];
-        }
-        return count;
     }
 
     int[] countNum(String str) {

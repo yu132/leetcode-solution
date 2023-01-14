@@ -12,7 +12,7 @@ public class FixedCounter {
      * 相当于计数数组，就是使用数组来进行计数
      * 可以计数的范围从start开始，到end-1结束
      */
-    static class IntFixedCounter {
+    class IntFixedCounter {
 
         int start, arr[];
 
