@@ -22,45 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="939b0656-0831-4bb7-adf0-91c176dc2d93" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/contest/lccup/ZP01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2505.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2533.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2539.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2576.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2579.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2580.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2583.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2587.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2588.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2592.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2593.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2594.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2596.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2597.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2656.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2696.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2697.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2706.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2710.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2716.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2717.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_11_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_4_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math3_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjdk_jmh_jmh_core_1_23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjdk_jmh_jmh_generator_annprocess_1_23.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/gradle_wrapper2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="939b0656-0831-4bb7-adf0-91c176dc2d93" name="Default Changelist" comment="1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2517.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2521.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2582.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/leetcode.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reredo/P0098.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reredo/P0098.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/redo/p2400_2499/P2420$Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/redo/p2400_2499/P2420$Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/reredo/P0098$Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/reredo/P0098$Solution.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/reredo/P0098.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/reredo/P0098.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,6 +267,28 @@
       <workItem from="1673361975146" duration="1335000" />
       <workItem from="1673703664449" duration="3450000" />
     </task>
+    <task id="LOCAL-00001" summary="1">
+      <created>1698332672839</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698332672839</updated>
+    </task>
+    <task id="LOCAL-00002" summary="1">
+      <created>1698332723514</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698332723514</updated>
+    </task>
+    <task id="LOCAL-00003" summary="1">
+      <created>1698332737653</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698332737653</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,6 +304,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
