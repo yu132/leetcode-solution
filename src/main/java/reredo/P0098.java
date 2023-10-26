@@ -1,17 +1,12 @@
 package reredo;
 
 import model.TreeNode;
-import org.junit.platform.engine.support.hierarchical.Node;
 
-/**  
- * @ClassName: P0098  
- *
- * @Description: TODO(这里用一句话描述这个类的作用)  
- *
- * @author 余定邦  
- *
- * @date 2021年3月5日  
- *  
+/**
+ * @author 余定邦
+ * @ClassName: P0098
+ * @Description: TODO(这里用一句话描述这个类的作用)
+ * @date 2021年3月5日
  */
 public class P0098 {
 
@@ -31,7 +26,7 @@ public class P0098 {
             }
 
             return helper(node.left, min, node.val)
-                && helper(node.right, node.val, max);
+                    && helper(node.right, node.val, max);
         }
     }
 

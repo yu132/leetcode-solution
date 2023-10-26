@@ -22,7 +22,46 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="939b0656-0831-4bb7-adf0-91c176dc2d93" name="Default Changelist" comment="" />
+    <list default="true" id="939b0656-0831-4bb7-adf0-91c176dc2d93" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/contest/lccup/ZP01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2505.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2533.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2539.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2576.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2579.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2580.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2583.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2587.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2588.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2592.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2593.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2594.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2596.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2597.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2656.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2696.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2697.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2706.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2710.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2716.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2717.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_4_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math3_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjdk_jmh_jmh_core_1_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjdk_jmh_jmh_generator_annprocess_1_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/gradle_wrapper2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leetcode.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reredo/P0098.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reredo/P0098.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/redo/p2400_2499/P2420$Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/redo/p2400_2499/P2420$Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/reredo/P0098$Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/reredo/P0098$Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/reredo/P0098.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/reredo/P0098.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,40 +86,41 @@
     </option>
   </component>
   <component name="ProjectId" id="24JfMPhLTPJQrfAapAzIAhrqBEI" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../java_workspace/Data  Structure Review" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/java_proj/leetcode-solution&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.saveactions&quot;
+  }
+}</component>
   <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="old" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\app\eclipse\leetcode\src\note" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="old" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.P2420">
+  <component name="RunManager" selected="Application.P2576">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="P2420" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="redo.p2400_2499.P2420" />
       <module name="leetcode" />
@@ -107,12 +147,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P2438" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="redo.p2400_2499.P2438" />
+    <configuration name="P2533" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="redo.p2500_2599.P2533" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="redo.p2400_2499.*" />
+          <option name="PATTERN" value="redo.p2500_2599.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,12 +160,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P2443" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="redo.p2400_2499.P2443" />
+    <configuration name="P2576" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="redo.p2500_2599.P2576" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="redo.p2400_2499.*" />
+          <option name="PATTERN" value="redo.p2500_2599.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,37 +173,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P2452" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="redo.p2400_2499.P2452" />
+    <configuration name="P2593" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="redo.p2500_2599.P2593" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="redo.p2400_2499.*" />
+          <option name="PATTERN" value="redo.p2500_2599.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.P2576" />
+        <item itemvalue="Application.P2593" />
+        <item itemvalue="Application.P2533" />
         <item itemvalue="Application.P2420" />
         <item itemvalue="Application.P2434" />
-        <item itemvalue="Application.P2438" />
-        <item itemvalue="Application.P2443" />
-        <item itemvalue="Application.P2452" />
       </list>
     </recent_temporary>
   </component>
@@ -287,65 +316,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="833" y="181" key="#com.intellij.ide.util.MemberChooser" timestamp="1673362195818">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="833" y="181" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1673362195818" />
-    <state x="693" y="229" key="#xdebugger.evaluate" timestamp="1672839882838">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="693" y="229" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1672839882838" />
-    <state width="1338" height="269" key="GridCell.Tab.0.bottom" timestamp="1673277811675">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1338" height="269" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1673277811675" />
-    <state width="1338" height="269" key="GridCell.Tab.0.center" timestamp="1673277811674">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1338" height="269" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1673277811674" />
-    <state width="1338" height="269" key="GridCell.Tab.0.left" timestamp="1673277811674">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1338" height="269" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1673277811674" />
-    <state width="1338" height="269" key="GridCell.Tab.0.right" timestamp="1673277811674">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1338" height="269" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1673277811674" />
-    <state width="1338" height="269" key="GridCell.Tab.1.bottom" timestamp="1673277811676">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1338" height="269" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1673277811676" />
-    <state width="1338" height="269" key="GridCell.Tab.1.center" timestamp="1673277811676">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1338" height="269" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1673277811676" />
-    <state width="1338" height="269" key="GridCell.Tab.1.left" timestamp="1673277811675">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1338" height="269" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1673277811675" />
-    <state width="1338" height="269" key="GridCell.Tab.1.right" timestamp="1673277811676">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1338" height="269" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1673277811676" />
-    <state x="326" y="0" key="SettingsEditor" timestamp="1670339782455">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="326" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1670339782455" />
-    <state x="537" y="73" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1671968823025">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="537" y="73" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1671968823025" />
-    <state x="632" y="156" width="600" height="536" key="find.popup" timestamp="1673708417125">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="632" y="156" width="600" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1673708417124" />
-    <state x="431" y="145" key="search.everywhere.popup" timestamp="1672582936708">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="145" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1672582936708" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -394,6 +364,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/redo/p2400_2499/P2467.java</url>
           <line>19</line>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2533.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
