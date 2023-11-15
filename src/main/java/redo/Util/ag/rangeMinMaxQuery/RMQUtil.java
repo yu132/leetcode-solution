@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.function.BiFunction;
 
 /**
  * @author 余定邦
@@ -13,6 +14,29 @@ import java.util.concurrent.ThreadLocalRandom;
  * @date 2021年1月20日
  */
 public class RMQUtil {
+
+    // ST表法， ST TABLE
+
+    // op 必须满足某些要求，需要为可重复贡献问题，例如max，min，gcd三类能满足
+    int[][] rmqOpInit(int[] arr, BiFunction<Integer, Integer, Integer> op) {
+        int n = arr.length;
+        int[][] dp = new int[n][(int) (Math.log(n + 1) / Math.log(2)) + 1];
+        for (int i = 0; i < n; ++i) {
+            dp[i][0] = arr[i];
+        }
+        for (int j = 1; (1 << j) <= n; ++j) {
+            for (int i = 0; i + (1 << j) - 1 < n; ++i) {
+                dp[i][j] = op.apply(dp[i][j - 1], dp[i + (1 << (j - 1))][j - 1]);
+            }
+        }
+        return dp;
+    }
+
+    int queryOpRes(int start, int end, int[][] dp, BiFunction<Integer, Integer, Integer> op) {
+        int mid = (int) (Math.log(end - start + 1) / Math.log(2));
+        return op.apply(dp[start][mid], dp[end - (1 << mid) + 1][mid]);
+    }
+
 
     //O(nlogn)
     static int[][] rmqMaxInit(int[] arr) {

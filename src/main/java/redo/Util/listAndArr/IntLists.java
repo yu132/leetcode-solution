@@ -169,6 +169,27 @@ public class IntLists {
         return max;
     }
 
+    // 需要num是排序的
+    public List<int[]> toNumAndCount(int[] nums) {
+        List<int[]> ans = new ArrayList<>();
+        if (nums.length == 0) {
+            return ans;
+        }
+        int num = nums[0];
+        int count = 1;
+        for (int i = 1; i < nums.length; ++i) {
+            if (nums[i] == num) {
+                ++count;
+            } else {
+                ans.add(new int[]{num, count});
+                num = nums[i];
+                count = 1;
+            }
+        }
+        ans.add(new int[]{num, count});
+        return ans;
+    }
+
     int maxIndex(int[] nums, int start, int end) {
         int max = nums[start], maxIndex = start;
         for (int i = start + 1; i < end; ++i) {

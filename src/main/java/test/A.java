@@ -1,5 +1,9 @@
 package test;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 public class A {
 
 
@@ -16,11 +20,27 @@ public class A {
     }
 
     public static void main(String[] args) {
-        int count = 0;
-        for (int i = 1; i < 100; ++i) {
-            ;
-            System.out.println(a(i) + " " + (count += (i * (i + 3) / 2)));
+//        int count = 0;
+//        for (int i = 1; i < 100; ++i) {
+//            ;
+//            System.out.println(a(i) + " " + (count += (i * (i + 3) / 2)));
+//        }
+//        Random r = new Random();
+//        int num = 1;
+//        List<Integer> list = new ArrayList<>();
+//        for (int i = 0; i < 1000; ++i) {
+//            for (int j = 0; j < r.nextInt(10); ++j) {
+//                list.add(num);
+//            }
+//            num += r.nextInt(5);
+//        }
+//        System.out.println(list);
+        Random r = new Random();
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i < 1000; ++i) {
+            list.add(r.nextInt(101) - 50);
         }
+        System.out.println(list);
     }
 
 }
