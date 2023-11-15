@@ -22,28 +22,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="939b0656-0831-4bb7-adf0-91c176dc2d93" name="Default Changelist" comment="2023-11-08">
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2536.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2537.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2541.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2542.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2545.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2546.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2550.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2554.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2555.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2591.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2653.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2654.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2661.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="939b0656-0831-4bb7-adf0-91c176dc2d93" name="Default Changelist" comment="2023-11-15">
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2657.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2658.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/redo/Util/ag/rangeMinMaxQuery/RMQUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/redo/Util/ag/rangeMinMaxQuery/RMQUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/redo/Util/listAndArr/IntLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/redo/Util/listAndArr/IntLists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/A.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/redo/Util/listAndArr/IntLists$Range.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/redo/Util/listAndArr/IntLists$Range.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/redo/Util/listAndArr/IntLists.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/redo/Util/listAndArr/IntLists.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/test/A.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/A.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2661.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2661.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -334,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699458246316</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="2023-11-15">
+      <created>1700060879520</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1700060879520</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +347,8 @@
     <MESSAGE value="2023-10-28" />
     <MESSAGE value="2023-10-30" />
     <MESSAGE value="2023-11-08" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023-11-08" />
+    <MESSAGE value="2023-11-15" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023-11-15" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
