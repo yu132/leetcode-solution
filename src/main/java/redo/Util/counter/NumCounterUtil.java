@@ -82,6 +82,15 @@ public class NumCounterUtil {
         return prefix;
     }
 
+    // or(0 to i) = prefixOrBits[i+1] 或运算 前缀和，由于不能取逆运算，因此只能用于需要快速求 0 - k 范围内or值的场景
+    int[] prefixOrBits(int[] nums) {
+        int[] prefixBits = new int[nums.length + 1];
+        for (int i = 0; i < nums.length; ++i) {
+            prefixBits[i + 1] = prefixBits[i] | nums[i];
+        }
+        return prefixBits;
+    }
+
     void countRowAndColumn(int[][] matrix, int[] row, int[] col) {
         for (int i = 0; i < matrix.length; ++i) {
             for (int j = 0; j < matrix[0].length; ++j) {

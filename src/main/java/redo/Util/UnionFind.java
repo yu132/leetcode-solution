@@ -2,7 +2,6 @@ package redo.Util;
 
 import org.junit.Test;
 
-import java.util.Arrays;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -35,7 +34,7 @@ public class UnionFind {
             if (rank[typeX] > rank[typeY]) {
                 parent[typeY] = typeX;
             } else if (rank[typeX] < rank[typeY]) {
-                parent[typeX] = y;
+                parent[typeX] = typeY;
             } else {
                 parent[typeY] = typeX;
                 rank[typeX] += 1;
@@ -77,7 +76,7 @@ public class UnionFind {
                 parent[typeY] = typeX;
                 weight[typeX] += weight[typeY];
             } else {
-                parent[typeX] = y;
+                parent[typeX] = typeY;
                 weight[typeY] += weight[typeX];
             }
             --connectedComponentCount;

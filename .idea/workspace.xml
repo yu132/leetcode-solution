@@ -23,10 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="939b0656-0831-4bb7-adf0-91c176dc2d93" name="Default Changelist" comment="2023-11-15">
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2657.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2658.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2662.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2671.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2672.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2673.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2679.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2680.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2683.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2684.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2685.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2698.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2707.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2708.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2661.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2661.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/redo/Util/UnionFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/redo/Util/UnionFind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/redo/Util/counter/NumCounterUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/redo/Util/counter/NumCounterUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +87,7 @@
       <recent name="old" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.A">
+  <component name="RunManager" selected="Application.P2698">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -101,12 +112,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P2537" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="redo.p2500_2599.P2537" />
+    <configuration name="P2662" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="redo.p2600_2699.P2662" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="redo.p2500_2599.*" />
+          <option name="PATTERN" value="redo.p2600_2699.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,12 +125,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P2541" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="redo.p2500_2599.P2541" />
+    <configuration name="P2673" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="redo.p2600_2699.P2673" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="redo.p2500_2599.*" />
+          <option name="PATTERN" value="redo.p2600_2699.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,12 +138,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P2555" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="redo.p2500_2599.P2555" />
+    <configuration name="P2685" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="redo.p2600_2699.P2685" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="redo.p2500_2599.*" />
+          <option name="PATTERN" value="redo.p2600_2699.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -140,12 +151,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P2556" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="redo.p2500_2599.P2556" />
+    <configuration name="P2698" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="redo.p2600_2699.P2698" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="redo.p2500_2599.*" />
+          <option name="PATTERN" value="redo.p2600_2699.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -155,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.P2698" />
+        <item itemvalue="Application.P2685" />
+        <item itemvalue="Application.P2673" />
+        <item itemvalue="Application.P2662" />
         <item itemvalue="Application.A" />
-        <item itemvalue="Application.P2541" />
-        <item itemvalue="Application.P2537" />
-        <item itemvalue="Application.P2555" />
-        <item itemvalue="Application.P2556" />
       </list>
     </recent_temporary>
   </component>
@@ -324,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700060879520</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="2023-11-15">
+      <created>1700062067327</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700062067327</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,6 +420,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/redo/p2500_2599/P2533.java</url>
           <line>30</line>
           <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/redo/p2600_2699/P2685.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
