@@ -1,24 +1,62 @@
 package redo.Util.ds.monotonousDeque;
 
+import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
-/**  
- * @ClassName: MonotonousDeque  
- *
- * @Description: 
- * 
- *  内部维持单调不变的双端队列，用于线性优化某种有规律的查找情况，
- *  当出现例如a[i+1]<a[i]，而a[i]此时能被排除在查找范围之外的情况，
- *  则此时使用单调队列能优化至O(n)
- *
- * @author 余定邦  
- *
- * @date 2020年12月31日  
- *  
+/**
+ * @author 余定邦
+ * @ClassName: MonotonousDeque
+ * @Description: 内部维持单调不变的双端队列，用于线性优化某种有规律的查找情况，
+ * 当出现例如a[i+1]<a[i]，而a[i]此时能被排除在查找范围之外的情况，
+ * 则此时使用单调队列能优化至O(n)
+ * @date 2020年12月31日
  */
 public class MonotonousDequeUtil {
+
+    class LinkedMonotonousDeque<T> {
+
+        LinkedList<T> deque = new LinkedList<>();
+        Comparator<T> comparator;
+
+        public LinkedMonotonousDeque(Comparator<T> comparator) {
+            super();
+            this.comparator = comparator;
+        }
+
+        // 添加元素并且保持单调
+        public void offerAndRemove(T val, BiFunction<T, T, Boolean> monotoner) {
+            while (!deque.isEmpty() && monotoner.apply(deque.peekLast(), val)) {
+                deque.pollLast();
+            }
+            deque.offerLast(val);
+        }
+
+        // 删除最旧的元素，用于保持队列大小或者删除过期项目
+        public void keepSize(Function<T, Boolean> sizeKeeper) {
+            while (!deque.isEmpty() && sizeKeeper.apply(deque.peekFirst())) {
+                deque.pollFirst();
+            }
+        }
+
+        public int size() {
+            return deque.size();
+        }
+
+        public void clear() {
+            deque.clear();
+        }
+
+        public T first() {
+            return deque.getFirst();
+        }
+
+        public T end() {
+            return deque.getLast();
+        }
+    }
 
 
     // checked leetcode 1673
@@ -174,7 +212,7 @@ public class MonotonousDequeUtil {
             @SuppressWarnings("unchecked")
             public SimpleArrayDeque(int len) {
                 super();
-                this.deque = (T[])new Object[len];
+                this.deque = (T[]) new Object[len];
             }
 
             public void offerLast(T num) {
