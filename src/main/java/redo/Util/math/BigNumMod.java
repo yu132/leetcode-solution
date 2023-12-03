@@ -10,6 +10,23 @@ public class BigNumMod {
 
     public final static int MOD = 1_000_000_007;
 
+    int add(long a, long b) {
+        return (int) ((a % MOD + b % MOD) % MOD);
+    }
+
+    int minus(long a, long b) {// a > b
+        return (int) ((a % MOD - b % MOD + MOD) % MOD);// 加mod是为了防止为负数
+    }
+
+    int multiply(long a, long b) {
+        return (int) (((a % MOD) * (b % MOD)) % MOD);
+    }
+
+    // 成立的前提是a能整除b
+    int divide(long a, long b) {
+        return multiply(a, pow(b, MOD - 2, MOD), MOD) % MOD;
+    }
+
     int add(long a, long b, int mod) {
         return (int) ((a % mod + b % mod) % mod);
     }

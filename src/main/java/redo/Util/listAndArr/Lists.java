@@ -1,7 +1,9 @@
 package redo.Util.listAndArr;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author 余定邦
@@ -10,6 +12,14 @@ import java.util.List;
  * @date 2020年12月29日
  */
 public class Lists {
+
+    Map<Object, Integer> getIndexMap(Object[] arr) {
+        Map<Object, Integer> map = new HashMap<>();
+        for (int i = 0; i < arr.length; ++i) {
+            map.put(arr[i], i);
+        }
+        return map;
+    }
 
     public static <T> List<List<T>> copy2D(T[][] arr) {
         List<List<T>> outer = new ArrayList<>(arr.length);

@@ -15,6 +15,14 @@ import java.util.function.Function;
  */
 public class IntLists {
 
+    Map<Integer, Integer> getIndexMap(int[] arr) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < arr.length; ++i) {
+            map.put(arr[i], i);
+        }
+        return map;
+    }
+
     //排序查找两个数组是否包含相同元素
     boolean findEquals(int[] sortedArr1, int[] sortedArr2) {
         int index1 = 0, index2 = 0;
