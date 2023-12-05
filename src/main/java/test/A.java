@@ -1,9 +1,5 @@
 package test;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 public class A {
 
 
@@ -35,12 +31,14 @@ public class A {
 //            num += r.nextInt(5);
 //        }
 //        System.out.println(list);
-        Random r = new Random();
-        List<Integer> list = new ArrayList<>();
-        for (int i = 0; i < 1000; ++i) {
-            list.add(r.nextInt(101) - 50);
-        }
-        System.out.println(list);
+//        Random r = new Random();
+//        List<Integer> list = new ArrayList<>();
+//        for (int i = 0; i < 1000; ++i) {
+//            list.add(r.nextInt(101) - 50);
+//        }
+//        System.out.println(list);
+        System.out.println(1000_01 * 1000_01);
+        System.out.println(1000_01L * 1000_01);
     }
 
 }

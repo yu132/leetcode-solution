@@ -22,20 +22,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="939b0656-0831-4bb7-adf0-91c176dc2d93" name="Default Changelist" comment="2023-11-23">
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2741.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2745.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2746.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2747.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2749.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2750.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2761.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2762.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2766.java" afterDir="false" />
+    <list default="true" id="939b0656-0831-4bb7-adf0-91c176dc2d93" name="Default Changelist" comment="2023-12-03">
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2767.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2768.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2770.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2771.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2772.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2779.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test/PowerX.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/redo/Util/listAndArr/IntLists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/redo/Util/listAndArr/IntLists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/redo/Util/listAndArr/Lists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/redo/Util/listAndArr/Lists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/redo/Util/math/BigNumMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/redo/Util/math/BigNumMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/A.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +81,7 @@
       <recent name="old" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.P2750">
+  <component name="RunManager" selected="Application.P2771">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -97,8 +93,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArrCast" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.ArrCast" />
+    <configuration name="A" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.A" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
@@ -110,8 +106,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P2731" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="redo.p2700_2799.P2731" />
+    <configuration name="P2767" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="redo.p2700_2799.P2767" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
@@ -123,8 +119,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P2746" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="redo.p2700_2799.P2746" />
+    <configuration name="P2768" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="redo.p2700_2799.P2768" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
@@ -136,8 +132,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P2750" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="redo.p2700_2799.P2750" />
+    <configuration name="P2771" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="redo.p2700_2799.P2771" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
@@ -149,12 +145,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="P2940" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="redo.p2900_2999.P2940" />
+    <configuration name="PowerX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.PowerX" />
       <module name="leetcode" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="redo.p2900_2999.*" />
+          <option name="PATTERN" value="test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -164,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.P2750" />
-        <item itemvalue="Application.P2746" />
-        <item itemvalue="Application.P2940" />
-        <item itemvalue="Application.ArrCast" />
-        <item itemvalue="Application.P2731" />
+        <item itemvalue="Application.P2771" />
+        <item itemvalue="Application.P2768" />
+        <item itemvalue="Application.A" />
+        <item itemvalue="Application.P2767" />
+        <item itemvalue="Application.PowerX" />
       </list>
     </recent_temporary>
   </component>
@@ -361,7 +357,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700972649656</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="2023-12-03">
+      <created>1701609765239</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1701609765239</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,7 +390,8 @@
     <MESSAGE value="2023-11-15" />
     <MESSAGE value="2023-11-21" />
     <MESSAGE value="2023-11-23" />
-    <option name="LAST_COMMIT_MESSAGE" value="2023-11-23" />
+    <MESSAGE value="2023-12-03" />
+    <option name="LAST_COMMIT_MESSAGE" value="2023-12-03" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -451,6 +455,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2712.java</url>
           <line>28</line>
           <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/redo/p2700_2799/P2771.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
