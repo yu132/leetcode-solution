@@ -4,15 +4,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**  
- * @ClassName: Chars  
- *
- * @Description: TODO(这里用一句话描述这个类的作用)  
- *
- * @author 余定邦  
- *
- * @date 2020年12月28日  
- *  
+/**
+ * @author 余定邦
+ * @ClassName: Chars
+ * @Description: TODO(这里用一句话描述这个类的作用)
+ * @date 2020年12月28日
  */
 public class Chars {
 
@@ -45,12 +41,12 @@ public class Chars {
 
         Arrays.setAll(ans, (x) -> new ArrayList<>());
 
-        for (int i = 0; i < str.length();) {
+        for (int i = 0; i < str.length(); ) {
             int j = i + 1;
             while (j < str.length() && str.charAt(j) == str.charAt(i)) {
                 ++j;
             }
-            ans[str.charAt(i) - 'a'].add(new int[] {i, j});
+            ans[str.charAt(i) - 'a'].add(new int[]{i, j});
             i = j;
         }
 
@@ -89,6 +85,11 @@ public class Chars {
 
     public boolean isLowercaseVowel(char ch) {
         return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
+    }
+
+    public boolean isVowel(char ch) {
+        return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'
+                || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U';
     }
 
     public int mappingLowercaseVowel(char ch) {

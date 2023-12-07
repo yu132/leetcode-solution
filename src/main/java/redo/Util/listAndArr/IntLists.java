@@ -15,6 +15,38 @@ import java.util.function.Function;
  */
 public class IntLists {
 
+    int[] maxCountNum(List<Integer> list) {
+        int num = list.get(0), count = 1;
+        for (int i = 1; i < list.size(); ++i) {
+            if (num == list.get(i)) {
+                ++count;
+            } else {
+                if (count == 0) {
+                    num = list.get(i);
+                    count = 1;
+                } else {
+                    --count;
+                }
+            }
+        }
+        int realCount = getEleCount(list, num);
+        if (realCount >= list.size() / 2) {
+            return new int[]{num, realCount};
+        } else {
+            return null;
+        }
+    }
+
+    int getEleCount(List<Integer> list, int val) {
+        int count = 0;
+        for (Integer integer : list) {
+            if (val == integer) {
+                ++count;
+            }
+        }
+        return count;
+    }
+
     Map<Integer, Integer> getIndexMap(int[] arr) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < arr.length; ++i) {
