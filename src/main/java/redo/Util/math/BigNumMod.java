@@ -22,6 +22,20 @@ public class BigNumMod {
         return (int) (((a % MOD) * (b % MOD)) % MOD);
     }
 
+    //模数不能求模，如果需要，要先求欧拉函数，再对欧拉函数的结果求模，见上eulerFastPow，还需要mod是一个质数
+    int pow(long base, long exp) {
+        long ans = 1;
+        base %= MOD;
+        while (exp > 0) {
+            if (exp % 2 != 0) {
+                ans = (ans * base) % MOD;
+            }
+            exp >>= 1;
+            base = (base * base) % MOD;
+        }
+        return (int) ans;
+    }
+
     // 成立的前提是a能整除b
     int divide(long a, long b) {
         return multiply(a, pow(b, MOD - 2, MOD), MOD) % MOD;
