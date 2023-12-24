@@ -17,6 +17,12 @@ public class UnionFind {
     public class RankedUnionFind {
         int connectedComponentCount, rank[], parent[];
 
+        public RankedUnionFind(RankedUnionFind toCopy) {
+            connectedComponentCount = toCopy.connectedComponentCount;
+            rank = Arrays.copyOf(toCopy.rank, toCopy.rank.length);
+            parent = Arrays.copyOf(toCopy.parent, toCopy.parent.length);
+        }
+
         public RankedUnionFind(int num) {
             super();
             rank = new int[num];

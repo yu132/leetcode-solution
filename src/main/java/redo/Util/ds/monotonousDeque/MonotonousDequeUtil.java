@@ -1,6 +1,5 @@
 package redo.Util.ds.monotonousDeque;
 
-import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.function.BiFunction;
 import java.util.function.Consumer;
@@ -19,12 +18,6 @@ public class MonotonousDequeUtil {
     class LinkedMonotonousDeque<T> {
 
         LinkedList<T> deque = new LinkedList<>();
-        Comparator<T> comparator;
-
-        public LinkedMonotonousDeque(Comparator<T> comparator) {
-            super();
-            this.comparator = comparator;
-        }
 
         // 添加元素并且保持单调
         public void offerAndRemove(T val, BiFunction<T, T, Boolean> monotoner) {

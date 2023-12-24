@@ -14,6 +14,14 @@ public class BigNumMod {
         return (int) ((a % MOD + b % MOD) % MOD);
     }
 
+    int add(int... a) {
+        long ans = 0;
+        for (long num : a) {
+            ans += num;
+        }
+        return (int) (ans % MOD);
+    }
+
     int minus(long a, long b) {// a > b
         return (int) ((a % MOD - b % MOD + MOD) % MOD);// 加mod是为了防止为负数
     }

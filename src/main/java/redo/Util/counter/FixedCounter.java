@@ -1,5 +1,7 @@
 package redo.Util.counter;
 
+import java.util.Arrays;
+
 /**
  * @author 余定邦
  * @ClassName: FixedCounter
@@ -38,6 +40,10 @@ public class FixedCounter {
                 return 0;
             }
             return arr[val - start];
+        }
+
+        boolean equals(IntFixedCounter fixedCounter) {
+            return Arrays.equals(arr, fixedCounter.arr);
         }
     }
 
