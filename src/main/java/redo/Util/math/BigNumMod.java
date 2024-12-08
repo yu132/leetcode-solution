@@ -61,7 +61,7 @@ public class BigNumMod {
         return (int) (((a % mod) * (b % mod)) % mod);
     }
 
-    // 成立的前提是a能整除b
+    // mod必须为质数
     int divide(long a, long b, int mod) {
         return multiply(a, pow(b, mod - 2, mod), mod) % mod;
     }

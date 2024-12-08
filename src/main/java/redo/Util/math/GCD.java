@@ -26,7 +26,7 @@ public class GCD {
     }
 
     /**
-     * 求两个数的最大公倍数
+     * 求两个数的最小公倍数
      *
      * @param m
      * @param n
